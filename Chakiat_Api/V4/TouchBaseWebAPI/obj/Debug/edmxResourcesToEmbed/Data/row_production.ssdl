@@ -1,0 +1,1340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="row_productionModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="row_productionModelStoreContainer">
+    <EntitySet Name="announcement_repeatdate" EntityType="row_productionModel.Store.announcement_repeatdate" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="announcements_details" EntityType="row_productionModel.Store.announcements_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="announcements_master" EntityType="row_productionModel.Store.announcements_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="attentance_master" EntityType="row_productionModel.Store.attentance_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="committee_master" EntityType="row_productionModel.Store.committee_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="country_master" EntityType="row_productionModel.Store.country_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="deletedimages" EntityType="row_productionModel.Store.deletedimages" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="district_master" EntityType="row_productionModel.Store.district_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="document_details" EntityType="row_productionModel.Store.document_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="document_safe" EntityType="row_productionModel.Store.document_safe" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="event_details" EntityType="row_productionModel.Store.event_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="event_details_member_response" EntityType="row_productionModel.Store.event_details_member_response" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="event_master" EntityType="row_productionModel.Store.event_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="event_question_options" EntityType="row_productionModel.Store.event_question_options" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="event_questionnaire_master" EntityType="row_productionModel.Store.event_questionnaire_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="event_repeatdate" EntityType="row_productionModel.Store.event_repeatdate" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="external_link_master" EntityType="row_productionModel.Store.external_link_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="gallery_image_details" EntityType="row_productionModel.Store.gallery_image_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="gallery_master" EntityType="row_productionModel.Store.gallery_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="gallery_member_details" EntityType="row_productionModel.Store.gallery_member_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_admin_members" EntityType="row_productionModel.Store.group_admin_members" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_advance_filter" EntityType="row_productionModel.Store.group_advance_filter" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_category_master" EntityType="row_productionModel.Store.group_category_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_dynamic_fields" EntityType="row_productionModel.Store.group_dynamic_fields" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_info" EntityType="row_productionModel.Store.group_info" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_master" EntityType="row_productionModel.Store.group_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_member_fields" EntityType="row_productionModel.Store.group_member_fields" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_memberfield_lookup" EntityType="row_productionModel.Store.group_memberfield_lookup" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="group_modules" EntityType="row_productionModel.Store.group_modules" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="image_table" EntityType="row_productionModel.Store.image_table" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="improvement_details" EntityType="row_productionModel.Store.improvement_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="improvement_master" EntityType="row_productionModel.Store.improvement_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="language_label" EntityType="row_productionModel.Store.language_label" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="language_master" EntityType="row_productionModel.Store.language_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="main_member_master" EntityType="row_productionModel.Store.main_member_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_address_detail" EntityType="row_productionModel.Store.member_address_detail" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_dashboard" EntityType="row_productionModel.Store.member_dashboard" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_family_master" EntityType="row_productionModel.Store.member_family_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_log" EntityType="row_productionModel.Store.member_log" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_master_profile" EntityType="row_productionModel.Store.member_master_profile" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_profile_dynamic_fields" EntityType="row_productionModel.Store.member_profile_dynamic_fields" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_profile_field_lookup" EntityType="row_productionModel.Store.member_profile_field_lookup" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="member_profile_selected_fields" EntityType="row_productionModel.Store.member_profile_selected_fields" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="module_master" EntityType="row_productionModel.Store.module_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="newsletter_details" EntityType="row_productionModel.Store.newsletter_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="newsletter_master" EntityType="row_productionModel.Store.newsletter_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="notification_flag" EntityType="row_productionModel.Store.notification_flag" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="order_club_subscription" EntityType="row_productionModel.Store.order_club_subscription" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="order_master" EntityType="row_productionModel.Store.order_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="past_presidents" EntityType="row_productionModel.Store.past_presidents" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="payment_info" EntityType="row_productionModel.Store.payment_info" store:Type="Tables" store:Schema="row_production" store:Name="payment_info">
+      <DefiningQuery>SELECT
+      `payment_info`.`txn_Id`, 
+      `payment_info`.`txn_ref`, 
+      `payment_info`.`txn_status`, 
+      `payment_info`.`txn_message`, 
+      `payment_info`.`amount`, 
+      `payment_info`.`first_name`, 
+      `payment_info`.`last_name`, 
+      `payment_info`.`email`, 
+      `payment_info`.`address`, 
+      `payment_info`.`City`, 
+      `payment_info`.`State`, 
+      `payment_info`.`Country`, 
+      `payment_info`.`zip_code`, 
+      `payment_info`.`mobile_number`, 
+      `payment_info`.`payment_mode`, 
+      `payment_info`.`Datetime`, 
+      `payment_info`.`club_name`
+      FROM `payment_info` AS `payment_info`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="payment_master" EntityType="row_productionModel.Store.payment_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="rotary_library" EntityType="row_productionModel.Store.rotary_library" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="rpt_project_report" EntityType="row_productionModel.Store.rpt_project_report" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="rpt_report_detail" EntityType="row_productionModel.Store.rpt_report_detail" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="rpt_tblclubtrf" EntityType="row_productionModel.Store.rpt_tblclubtrf" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="service_directory" EntityType="row_productionModel.Store.service_directory" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="settings_master" EntityType="row_productionModel.Store.settings_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="single_field_master" EntityType="row_productionModel.Store.single_field_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="subgroup_details" EntityType="row_productionModel.Store.subgroup_details" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="subgroup_master" EntityType="row_productionModel.Store.subgroup_master" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="suggestfeature" EntityType="row_productionModel.Store.suggestfeature" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="tbl_exceptoinlog" EntityType="row_productionModel.Store.tbl_exceptoinlog" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="touchbase_versionmaster" EntityType="row_productionModel.Store.touchbase_versionmaster" store:Type="Tables" Schema="row_production" />
+    <EntitySet Name="weblink_master" EntityType="row_productionModel.Store.weblink_master" store:Type="Tables" Schema="row_production" />
+  </EntityContainer>
+  <EntityType Name="announcement_repeatdate">
+    <Key>
+      <PropertyRef Name="pk_ann_repeatdate_id" />
+    </Key>
+    <Property Name="pk_ann_repeatdate_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_ann_master_id" Type="int" />
+    <Property Name="Repeat_date" Type="datetime" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="announcements_details">
+    <Key>
+      <PropertyRef Name="pk_announcements_details_id" />
+    </Key>
+    <Property Name="pk_announcements_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_announcements_master_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="varchar" MaxLength="4" />
+    <Property Name="ann_not_sent" Type="varchar" MaxLength="5" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="announcements_master">
+    <Key>
+      <PropertyRef Name="pk_announcements_master_id" />
+    </Key>
+    <Property Name="pk_announcements_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_module_id" Type="int" />
+    <Property Name="announcements_desc" Type="text" />
+    <Property Name="announcements_title" Type="varchar" MaxLength="2000" />
+    <Property Name="announcement_img" Type="varchar" />
+    <Property Name="notification_date" Type="datetime" />
+    <Property Name="notification_time" Type="time" />
+    <Property Name="publish_date" Type="datetime" />
+    <Property Name="publish_time" Type="time" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="notification_sent" Type="varchar" MaxLength="10" />
+    <Property Name="blood_group" Type="varchar" MaxLength="10" />
+    <Property Name="announcement_type" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_flag" Type="varchar" MaxLength="3" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="send_sms_all_flag" Type="varchar" MaxLength="3" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="attentance_master">
+    <Key>
+      <PropertyRef Name="attendance_id" />
+    </Key>
+    <Property Name="attendance_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="int" />
+    <Property Name="fk_module_id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="unique_id_no" Type="varchar" MaxLength="100" />
+    <Property Name="attendance_percentage" Type="varchar" MaxLength="100" />
+    <Property Name="attendance_month" Type="varchar" MaxLength="50" />
+    <Property Name="attendance_year" Type="varchar" MaxLength="50" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="committee_master">
+    <Key>
+      <PropertyRef Name="committee_master_id" />
+    </Key>
+    <Property Name="committee_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="member_name" Type="varchar" MaxLength="255" />
+    <Property Name="member_designation" Type="varchar" MaxLength="300" />
+    <Property Name="year" Type="varchar" MaxLength="255" />
+    <Property Name="LastEditedBy" Type="int" />
+    <Property Name="EnteredBy" Type="int" />
+    <Property Name="club_name" Type="text" />
+  </EntityType>
+  <EntityType Name="country_master">
+    <Key>
+      <PropertyRef Name="country_master_id" />
+    </Key>
+    <Property Name="country_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="country_master_name" Type="varchar" MaxLength="255" />
+    <Property Name="country_code" Type="varchar" MaxLength="10" />
+    <Property Name="GMT_Opt" Type="varchar" MaxLength="2" />
+    <Property Name="GMT_Time" Type="time" />
+  </EntityType>
+  <EntityType Name="deletedimages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImageName" Type="varchar" MaxLength="200" />
+    <Property Name="ImagePath" Type="text" />
+    <Property Name="FileDelete" Type="int" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="20" />
+    <Property Name="deletedOn" Type="date" />
+    <Property Name="fk_group_master_id" Type="int" />
+  </EntityType>
+  <EntityType Name="district_master">
+    <Key>
+      <PropertyRef Name="pk_district_master_id" />
+    </Key>
+    <Property Name="pk_district_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="grand_total" Type="decimal" Precision="30" />
+    <Property Name="district_number" Type="varchar" MaxLength="10" />
+    <Property Name="zone" Type="varchar" MaxLength="50" />
+    <Property Name="dist_amt_balance" Type="int" />
+    <Property Name="dist_last_pack_purchase_amt" Type="int" />
+    <Property Name="BirthText" Type="varchar" MaxLength="2000" />
+    <Property Name="AnnText" Type="varchar" MaxLength="2000" />
+    <Property Name="renewal_sub_amount" Type="decimal" Scale="2" />
+    <Property Name="from_date" Type="date" />
+    <Property Name="to_date" Type="date" />
+    <Property Name="Import_flag_10" Type="int" />
+    <Property Name="SMS_Pack_Update_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="document_details">
+    <Key>
+      <PropertyRef Name="pk_document_details_id" />
+    </Key>
+    <Property Name="pk_document_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_document_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="int" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="document_safe">
+    <Key>
+      <PropertyRef Name="pk_document_id" />
+    </Key>
+    <Property Name="pk_document_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="document_access_type" Type="int" />
+    <Property Name="document_title" Type="varchar" MaxLength="100" />
+    <Property Name="document_path" Type="varchar" MaxLength="200" />
+    <Property Name="document_type" Type="varchar" MaxLength="50" />
+    <Property Name="publish_date" Type="datetime" />
+    <Property Name="document_ext" Type="varchar" MaxLength="50" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modify_by" Type="int" />
+    <Property Name="modify_on" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="event_details">
+    <Key>
+      <PropertyRef Name="pk_event_detail_id" />
+    </Key>
+    <Property Name="pk_event_detail_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="fk_SubGroupMaster_Id" Type="int" />
+    <Property Name="fk_member_master_id" Type="int" />
+    <Property Name="event_child_flag" Type="varchar" MaxLength="10" />
+    <Property Name="event_child_people" Type="int" />
+    <Property Name="event_response_date" Type="date" />
+    <Property Name="event_read_flag" Type="int" />
+    <Property Name="event_notification_sent" Type="tinyint" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="event_details_member_response">
+    <Key>
+      <PropertyRef Name="PK_memberResponse_Id" />
+    </Key>
+    <Property Name="PK_memberResponse_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fk_Event_Details_Id" Type="int" />
+    <Property Name="Fk_Event_Question_ID" Type="int" />
+    <Property Name="Answer" Type="text" />
+    <Property Name="ResponseDate" Type="datetime" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="fk_member_profile_id" Type="int" />
+    <Property Name="member_RSVP_Response" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="event_master">
+    <Key>
+      <PropertyRef Name="pk_event_master_id" />
+    </Key>
+    <Property Name="pk_event_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_subgroup_master_id" Type="int" />
+    <Property Name="event_title" Type="varchar" MaxLength="2000" />
+    <Property Name="event_desc" Type="text" />
+    <Property Name="event_img" Type="varchar" />
+    <Property Name="event_date" Type="datetime" />
+    <Property Name="event_time" Type="varchar" MaxLength="10" />
+    <Property Name="event_venue" Type="varchar" />
+    <Property Name="venue_lat" Type="varchar" MaxLength="20" />
+    <Property Name="venue_long" Type="varchar" MaxLength="20" />
+    <Property Name="publish_Date" Type="datetime" />
+    <Property Name="publish_Time" Type="varchar" MaxLength="20" />
+    <Property Name="expiry_Date" Type="datetime" />
+    <Property Name="expiry_Time" Type="varchar" MaxLength="20" />
+    <Property Name="event_cut_off_date" Type="datetime" />
+    <Property Name="notification_start_date" Type="datetime" />
+    <Property Name="notification_start_time" Type="varchar" MaxLength="10" />
+    <Property Name="event_enable" Type="varchar" MaxLength="10" />
+    <Property Name="questionEnable" Type="int" />
+    <Property Name="event_type" Type="varchar" MaxLength="10" />
+    <Property Name="rsvp_enable" Type="int" />
+    <Property Name="notification_sent" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_flag" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_all_flag" Type="varchar" MaxLength="10" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="event_question_options">
+    <Key>
+      <PropertyRef Name="pk_optionID" />
+    </Key>
+    <Property Name="pk_optionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_questionID" Type="int" />
+    <Property Name="optionText" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="event_questionnaire_master">
+    <Key>
+      <PropertyRef Name="pk_event_questionID" />
+    </Key>
+    <Property Name="pk_event_questionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_ID" Type="int" />
+    <Property Name="question_type" Type="int" />
+    <Property Name="question_text" Type="text" />
+    <Property Name="option1" Type="varchar" />
+    <Property Name="option2" Type="varchar" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="Created_by" Type="int" />
+    <Property Name="Isdeleted" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="deleted_by" Type="int" />
+  </EntityType>
+  <EntityType Name="event_repeatdate">
+    <Key>
+      <PropertyRef Name="pk_event_repeatdate_id" />
+    </Key>
+    <Property Name="pk_event_repeatdate_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="Repeat_date" Type="datetime" />
+    <Property Name="repeat_time" Type="varchar" MaxLength="10" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="external_link_master">
+    <Key>
+      <PropertyRef Name="pk_linkId" />
+    </Key>
+    <Property Name="pk_linkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_Id" Type="int" />
+    <Property Name="fk_module_master_id" Type="int" />
+    <Property Name="link" Type="text" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Creation_date" Type="datetime" />
+    <Property Name="Modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LableText" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="gallery_image_details">
+    <Key>
+      <PropertyRef Name="pk_gallery_image_details_id" />
+    </Key>
+    <Property Name="pk_gallery_image_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_gallery_id" Type="int" />
+    <Property Name="image_name" Type="varchar" MaxLength="200" />
+    <Property Name="image_description" Type="text" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="gallery_master">
+    <Key>
+      <PropertyRef Name="pk_gallery_id" />
+    </Key>
+    <Property Name="pk_gallery_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_module_master_id" Type="int" />
+    <Property Name="album_title" Type="varchar" MaxLength="200" />
+    <Property Name="album_desc" Type="text" />
+    <Property Name="album_image" Type="varchar" MaxLength="200" />
+    <Property Name="album_type" Type="varchar" MaxLength="20" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="gallery_member_details">
+    <Key>
+      <PropertyRef Name="pk_gallery_member_details_id" />
+    </Key>
+    <Property Name="pk_gallery_member_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_gallery_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="tinyint" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="group_admin_members">
+    <Key>
+      <PropertyRef Name="pk_group_admin_id" />
+    </Key>
+    <Property Name="pk_group_admin_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_member_master_id" Type="int" />
+    <Property Name="pwd" Type="varchar" MaxLength="40" />
+    <Property Name="mobile_no" Type="varchar" MaxLength="20" />
+    <Property Name="user_Role" Type="varchar" MaxLength="20" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="date" />
+    <Property Name="IsDeleted" Type="bool" />
+    <Property Name="dg_role" Type="varchar" MaxLength="60" />
+    <Property Name="fk_country_master_id" Type="int" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="date" />
+    <Property Name="country" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="group_advance_filter">
+    <Key>
+      <PropertyRef Name="pk_filterID" />
+    </Key>
+    <Property Name="pk_filterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_field_ID" Type="int" />
+    <Property Name="DBColumnName" Type="varchar" MaxLength="100" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+    <Property Name="Col_Type" Type="varchar" MaxLength="20" />
+    <Property Name="fieldType" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="group_category_master">
+    <Key>
+      <PropertyRef Name="group_category_id" />
+    </Key>
+    <Property Name="group_category_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="varchar" MaxLength="50" />
+    <Property Name="flag" Type="int" />
+  </EntityType>
+  <EntityType Name="group_dynamic_fields">
+    <Key>
+      <PropertyRef Name="pk_fieldID" />
+    </Key>
+    <Property Name="pk_fieldID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="Field_Title" Type="varchar" MaxLength="100" />
+    <Property Name="Field_Type" Type="varchar" MaxLength="500" />
+    <Property Name="Field_category" Type="char" MaxLength="2" />
+    <Property Name="IsEditableByMember" Type="tinyint" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="Created_By" Type="int" />
+    <Property Name="Created_on" Type="datetime" />
+    <Property Name="Modified_On" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Isdeleted" Type="int" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deleted_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="group_info">
+    <Key>
+      <PropertyRef Name="pk_grpinfo_id" />
+    </Key>
+    <Property Name="pk_grpinfo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="int" />
+    <Property Name="fk_module_id" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="200" />
+    <Property Name="description" Type="text" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="group_master">
+    <Key>
+      <PropertyRef Name="pk_group_master_id" />
+    </Key>
+    <Property Name="pk_group_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_district_master_id" Type="int" />
+    <Property Name="district_number" Type="varchar" MaxLength="20" />
+    <Property Name="group_name" Type="varchar" MaxLength="100" />
+    <Property Name="group_type" Type="varchar" MaxLength="20" />
+    <Property Name="group_category" Type="varchar" MaxLength="30" />
+    <Property Name="club_id" Type="int" />
+    <Property Name="club_Key" Type="varchar" MaxLength="100" />
+    <Property Name="address1" Type="varchar" MaxLength="2000" />
+    <Property Name="address2" Type="varchar" MaxLength="100" />
+    <Property Name="group_email" Type="varchar" MaxLength="100" />
+    <Property Name="pincode" Type="varchar" MaxLength="20" />
+    <Property Name="fk_state_master_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_city_master_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_country_master_id" Type="int" />
+    <Property Name="contact_no" Type="varchar" MaxLength="255" />
+    <Property Name="phone_no" Type="varchar" MaxLength="20" />
+    <Property Name="club_history" Type="text" />
+    <Property Name="memberCount" Type="bigint" />
+    <Property Name="fromDate" Type="datetime" />
+    <Property Name="toDate" Type="datetime" />
+    <Property Name="club_image" Type="varchar" MaxLength="245" />
+    <Property Name="club_website" Type="varchar" MaxLength="100" />
+    <Property Name="bdayann_smsreq" Type="int" />
+    <Property Name="club_rules" Type="text" />
+    <Property Name="club_bylaws" Type="text" />
+    <Property Name="SMSCount" Type="bigint" />
+    <Property Name="establish_date" Type="datetime" />
+    <Property Name="club_amt_balance" Type="int" />
+    <Property Name="club_last_pack_purchase_amt" Type="int" />
+    <Property Name="club_meeting_from_time" Type="time" />
+    <Property Name="club_meeting_to_time" Type="time" />
+    <Property Name="club_meeting_day" Type="varchar" MaxLength="30" />
+    <Property Name="meeting_notification" Type="varchar" MaxLength="5" />
+    <Property Name="Last_SMS_sent_on" Type="int" />
+    <Property Name="SMS_Pack_Update_Date" Type="datetime" />
+    <Property Name="spouse_login" Type="int" />
+    <Property Name="club_latitude" Type="varchar" MaxLength="30" />
+    <Property Name="club_longitude" Type="varchar" MaxLength="30" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="bool" />
+    <Property Name="country_name" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="group_member_fields">
+    <Key>
+      <PropertyRef Name="pk_group_member_fields_id" />
+    </Key>
+    <Property Name="pk_group_member_fields_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" Nullable="false" />
+    <Property Name="field_name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="order_by" Type="int" Nullable="false" />
+    <Property Name="sub_module_name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group_memberfield_lookup">
+    <Key>
+      <PropertyRef Name="pk_lookupId" />
+    </Key>
+    <Property Name="pk_lookupId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Id" Type="int" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="50" />
+    <Property Name="DBColumnName" Type="varchar" MaxLength="50" />
+    <Property Name="ColType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="group_modules">
+    <Key>
+      <PropertyRef Name="pk_group_modules_id" />
+    </Key>
+    <Property Name="pk_group_modules_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_module_master_id" Type="int" />
+    <Property Name="module_newname" Type="varchar" MaxLength="100" />
+    <Property Name="module_oldname" Type="varchar" MaxLength="100" />
+    <Property Name="module_image" Type="varchar" MaxLength="100" />
+    <Property Name="module_priority" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="image_table">
+    <Key>
+      <PropertyRef Name="pk_image_id" />
+    </Key>
+    <Property Name="pk_image_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Image_name" Type="varchar" MaxLength="100" />
+    <Property Name="Module_name" Type="varchar" MaxLength="100" />
+    <Property Name="File_type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="improvement_details">
+    <Key>
+      <PropertyRef Name="pk_improvement_details_id" />
+    </Key>
+    <Property Name="pk_improvement_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_improvement_master_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="varchar" MaxLength="4" />
+    <Property Name="ann_not_sent" Type="varchar" MaxLength="5" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="improvement_master">
+    <Key>
+      <PropertyRef Name="pk_improvement_master_id" />
+    </Key>
+    <Property Name="pk_improvement_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="improvement_desc" Type="text" />
+    <Property Name="improvement_title" Type="varchar" MaxLength="2000" />
+    <Property Name="improvement_img" Type="varchar" />
+    <Property Name="notification_date" Type="datetime" />
+    <Property Name="notification_time" Type="time" />
+    <Property Name="publish_date" Type="datetime" />
+    <Property Name="publish_time" Type="time" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="notification_sent" Type="varchar" MaxLength="10" />
+    <Property Name="improvement_type" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_flag" Type="varchar" MaxLength="3" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="send_sms_all_flag" Type="varchar" MaxLength="3" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="language_label">
+    <Key>
+      <PropertyRef Name="pk_language_label_id" />
+    </Key>
+    <Property Name="pk_language_label_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="label" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="english" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="french" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="hindi" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="language_master">
+    <Key>
+      <PropertyRef Name="pk_language_master_id" />
+    </Key>
+    <Property Name="pk_language_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="language_name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="display_name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="main_member_master">
+    <Key>
+      <PropertyRef Name="pk_main_member_master_id" />
+    </Key>
+    <Property Name="pk_main_member_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="member_name" Type="varchar" MaxLength="500" />
+    <Property Name="member_mobile" Type="varchar" MaxLength="50" />
+    <Property Name="fk_country_id" Type="int" />
+    <Property Name="ProfilePic_Path" Type="varchar" MaxLength="500" />
+    <Property Name="member_emailid" Type="varchar" MaxLength="250" />
+    <Property Name="IMEI_No" Type="varchar" MaxLength="500" />
+    <Property Name="DeviceToken" Type="varchar" MaxLength="500" />
+    <Property Name="Device_name" Type="varchar" MaxLength="100" />
+    <Property Name="versionNo" Type="varchar" MaxLength="500" />
+    <Property Name="registerForChat" Type="bool" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+    <Property Name="Last_visited_On" Type="datetime" />
+  </EntityType>
+  <EntityType Name="member_address_detail">
+    <Key>
+      <PropertyRef Name="pk_address_id" />
+    </Key>
+    <Property Name="pk_address_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_profile_id" Type="int" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="Address" Type="varchar" />
+    <Property Name="fk_city_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_state_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_country_id" Type="int" />
+    <Property Name="pincode" Type="varchar" MaxLength="20" />
+    <Property Name="phone_no" Type="varchar" MaxLength="20" />
+    <Property Name="fax" Type="varchar" MaxLength="20" />
+    <Property Name="Address_Type" Type="varchar" MaxLength="20" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="created_By" Type="int" />
+    <Property Name="modified_on" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="Isdeleted" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="BusinessName" Type="varchar" MaxLength="500" />
+    <Property Name="row_member_master_id" Type="int" />
+    <Property Name="country_name" Type="varchar" MaxLength="50" />
+    <Property Name="mem_phone" Type="varchar" MaxLength="50" />
+    <Property Name="con" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="member_dashboard">
+    <Key>
+      <PropertyRef Name="pk_dashboard_ID" />
+    </Key>
+    <Property Name="pk_dashboard_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_master_profile_ID" Type="int" />
+    <Property Name="fk_ModuleID" Type="int" />
+    <Property Name="modification_Date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Isdeleted" Type="tinyint" />
+    <Property Name="deletion_date" Type="date" />
+  </EntityType>
+  <EntityType Name="member_family_master">
+    <Key>
+      <PropertyRef Name="pk_member_family_master_id" />
+    </Key>
+    <Property Name="pk_member_family_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_member_master_id" Type="int" />
+    <Property Name="member_name" Type="varchar" MaxLength="255" />
+    <Property Name="member_relationship" Type="varchar" MaxLength="50" />
+    <Property Name="fk_country_id" Type="int" />
+    <Property Name="member_contact_no" Type="varchar" MaxLength="255" />
+    <Property Name="member_date_of_birth" Type="date" />
+    <Property Name="member_date_of_wedding" Type="date" />
+    <Property Name="member_blood_group" Type="varchar" MaxLength="255" />
+    <Property Name="EmailId" Type="varchar" MaxLength="100" />
+    <Property Name="particulars" Type="varchar" MaxLength="255" />
+    <Property Name="IMEI_No" Type="text" />
+    <Property Name="Device_Token" Type="text" />
+    <Property Name="Device_name" Type="varchar" MaxLength="10" />
+    <Property Name="Version_No" Type="int" />
+    <Property Name="Last_visited_On" Type="datetime" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+    <Property Name="row_member_master_id" Type="int" />
+    <Property Name="IsRotarian" Type="varchar" MaxLength="5" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="mem_phone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="member_log">
+    <Key>
+      <PropertyRef Name="pk_member_log_id" />
+    </Key>
+    <Property Name="pk_member_log_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_master_profile_id" Type="int" Nullable="false" />
+    <Property Name="fk_module_master_id" Type="int" Nullable="false" />
+    <Property Name="visit_date_time" Type="datetime" Nullable="false" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="member_master_profile">
+    <Key>
+      <PropertyRef Name="pk_member_master_profile_id" />
+    </Key>
+    <Property Name="pk_member_master_profile_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_main_member_master_id" Type="int" />
+    <Property Name="member_name" Type="varchar" MaxLength="500" />
+    <Property Name="blood_Group" Type="varchar" MaxLength="10" />
+    <Property Name="member_date_of_issue" Type="date" />
+    <Property Name="member_phone_no" Type="varchar" MaxLength="20" />
+    <Property Name="fk_country_ID" Type="int" />
+    <Property Name="member_mobile_no" Type="varchar" MaxLength="20" />
+    <Property Name="secondry_mobile_no" Type="varchar" MaxLength="255" />
+    <Property Name="member_fax_no" Type="varchar" MaxLength="20" />
+    <Property Name="group_category" Type="varchar" MaxLength="200" />
+    <Property Name="member_email_id" Type="varchar" MaxLength="250" />
+    <Property Name="member_date_of_birth" Type="date" />
+    <Property Name="member_family_photo_path" Type="varchar" />
+    <Property Name="member_profile_photo_path" Type="varchar" />
+    <Property Name="member_profile_status" Type="varchar" MaxLength="200" />
+    <Property Name="member_date_of_wedding" Type="date" />
+    <Property Name="designation" Type="varchar" />
+    <Property Name="BusinessName" Type="varchar" MaxLength="500" />
+    <Property Name="member_buss_email" Type="varchar" MaxLength="255" />
+    <Property Name="user_role" Type="varchar" MaxLength="255" />
+    <Property Name="app_device_token_id" Type="varchar" MaxLength="250" />
+    <Property Name="device_name" Type="varchar" MaxLength="11" />
+    <Property Name="notification_enable" Type="varchar" MaxLength="100" />
+    <Property Name="metataging" Type="varchar" MaxLength="250" />
+    <Property Name="IsBussDetailVisible" Type="int" />
+    <Property Name="IsPersonalDetailVisible" Type="int" />
+    <Property Name="IsFamilyDetailVisi1ble" Type="int" />
+    <Property Name="IsMobileVisible" Type="int" />
+    <Property Name="IsEmailVisible" Type="int" />
+    <Property Name="IdentificationCode" Type="varchar" MaxLength="100" />
+    <Property Name="registerForChat" Type="tinyint" />
+    <Property Name="particulars" Type="text" />
+    <Property Name="member_rotary_id" Type="varchar" MaxLength="20" />
+    <Property Name="member_master_designation" Type="varchar" MaxLength="300" />
+    <Property Name="dg_master_designation" Type="varchar" MaxLength="300" />
+    <Property Name="dg_role" Type="varchar" MaxLength="50" />
+    <Property Name="isBOD" Type="tinyint" />
+    <Property Name="BODorderNumber" Type="int" />
+    <Property Name="Keywords" Type="text" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+    <Property Name="club_name" Type="varchar" MaxLength="500" />
+    <Property Name="country_name" Type="varchar" MaxLength="200" />
+    <Property Name="club_id" Type="int" />
+    <Property Name="row_member_master_id" Type="int" />
+    <Property Name="show_mobile_self_club" Type="smallint" />
+    <Property Name="show_mobile_other_club" Type="smallint" />
+    <Property Name="show_email_self_club" Type="smallint" />
+    <Property Name="show_email_other_club" Type="smallint" />
+  </EntityType>
+  <EntityType Name="member_profile_dynamic_fields">
+    <Key>
+      <PropertyRef Name="pk_fieldValueID" />
+    </Key>
+    <Property Name="pk_fieldValueID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_MemberProfileID" Type="int" />
+    <Property Name="fk_DynamicFieldID" Type="int" />
+    <Property Name="fieldValue" Type="text" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+  </EntityType>
+  <EntityType Name="member_profile_field_lookup">
+    <Key>
+      <PropertyRef Name="pkFieldSetId" />
+    </Key>
+    <Property Name="pkFieldSetId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fieldName" Type="varchar" MaxLength="50" />
+    <Property Name="dbColumnName" Type="varchar" MaxLength="50" />
+    <Property Name="colType" Type="varchar" MaxLength="30" />
+    <Property Name="fieldType" Type="char" MaxLength="2" />
+    <Property Name="mandatory" Type="int" />
+    <Property Name="priority" Type="int" />
+    <Property Name="createdBy" Type="int" />
+    <Property Name="createdOn" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="member_profile_selected_fields">
+    <Key>
+      <PropertyRef Name="pk_id" />
+    </Key>
+    <Property Name="pk_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="int" />
+    <Property Name="fk_fieldID" Type="int" />
+    <Property Name="field_name" Type="varchar" MaxLength="70" />
+    <Property Name="field_new_name" Type="varchar" MaxLength="70" />
+    <Property Name="db_column_name" Type="varchar" MaxLength="70" />
+    <Property Name="colType" Type="varchar" MaxLength="30" />
+    <Property Name="field_type" Type="char" MaxLength="3" />
+    <Property Name="order_no" Type="varchar" MaxLength="20" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="module_master">
+    <Key>
+      <PropertyRef Name="pk_module_master_id" />
+    </Key>
+    <Property Name="pk_module_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="module_name" Type="varchar" MaxLength="20" />
+    <Property Name="module_static_ref" Type="varchar" MaxLength="20" />
+    <Property Name="replica_of_module" Type="int" />
+    <Property Name="module_price_rs" Type="float" />
+    <Property Name="module_price_usd" Type="float" />
+    <Property Name="image" Type="varchar" MaxLength="30" />
+    <Property Name="module_info" Type="text" />
+    <Property Name="phase" Type="int" Nullable="false" />
+    <Property Name="priority" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="newsletter_details">
+    <Key>
+      <PropertyRef Name="pk_newsletter_details_id" />
+    </Key>
+    <Property Name="pk_newsletter_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_newsletter_master_id" Type="int" />
+    <Property Name="fk_member_master_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="bool" />
+    <Property Name="Notification_sent" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="newsletter_master">
+    <Key>
+      <PropertyRef Name="pk_newsletter_master_id" />
+    </Key>
+    <Property Name="pk_newsletter_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="newsletter_title" Type="varchar" />
+    <Property Name="newsletter_link" Type="varchar" />
+    <Property Name="newsletter_filepath" Type="varchar" />
+    <Property Name="publish_date" Type="datetime" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="newsletter_type" Type="varchar" MaxLength="10" />
+    <Property Name="send_SMS_Flag" Type="int" />
+    <Property Name="send_SMS_all_Flag" Type="int" />
+    <Property Name="newsletter_from" Type="varchar" MaxLength="10" />
+    <Property Name="newsletter_date" Type="datetime" />
+    <Property Name="publish_time" Type="time" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="notification_flag">
+    <Key>
+      <PropertyRef Name="notification_flag_id" />
+    </Key>
+    <Property Name="notification_flag_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="app_device_token_id" Type="text" />
+    <Property Name="module_name" Type="varchar" MaxLength="20" />
+    <Property Name="not_desc" Type="text" />
+    <Property Name="last_updated_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="inc" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="memberId" Type="int" />
+  </EntityType>
+  <EntityType Name="order_club_subscription">
+    <Key>
+      <PropertyRef Name="pk_ClubSubcription_id" />
+    </Key>
+    <Property Name="pk_ClubSubcription_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="txn_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="club_name" Type="varchar" MaxLength="100" />
+    <Property Name="address_street" Type="varchar" MaxLength="500" />
+    <Property Name="city" Type="varchar" MaxLength="30" />
+    <Property Name="country" Type="varchar" MaxLength="30" />
+    <Property Name="state" Type="varchar" MaxLength="30" />
+    <Property Name="zipcode" Type="varchar" MaxLength="30" />
+    <Property Name="club_president_firstname" Type="varchar" MaxLength="100" />
+    <Property Name="club_president_lastname" Type="varchar" MaxLength="100" />
+    <Property Name="club_president_contact_no" Type="varchar" MaxLength="20" />
+    <Property Name="club_president_email_id" Type="varchar" MaxLength="100" />
+    <Property Name="designation" Type="varchar" MaxLength="50" />
+    <Property Name="District" Type="varchar" MaxLength="10" />
+    <Property Name="Acceptance_Agreement" Type="varchar" MaxLength="20" />
+    <Property Name="license_from_month" Type="varchar" MaxLength="10" />
+    <Property Name="license_to_month" Type="varchar" MaxLength="10" />
+    <Property Name="license_from_year" Type="varchar" MaxLength="10" />
+    <Property Name="license_to_year" Type="varchar" MaxLength="10" />
+    <Property Name="data_entry" Type="varchar" MaxLength="10" />
+    <Property Name="currency" Type="varchar" MaxLength="10" />
+    <Property Name="data_entry_amt" Type="double" />
+    <Property Name="currency1" Type="varchar" MaxLength="10" />
+    <Property Name="Amount" Type="double" />
+    <Property Name="currency2" Type="varchar" MaxLength="10" />
+    <Property Name="service_tax" Type="double" />
+    <Property Name="currency3" Type="varchar" MaxLength="10" />
+    <Property Name="grand_amt" Type="double" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="payment_type" Type="varchar" MaxLength="20" />
+    <Property Name="club_id" Type="int" />
+    <Property Name="district_id" Type="int" />
+    <Property Name="member_count" Type="int" />
+    <Property Name="club_count" Type="int" />
+    <Property Name="type_of_deal" Type="varchar" MaxLength="20" />
+    <Property Name="otp_received" Type="varchar" MaxLength="3" />
+    <Property Name="dollar_rate" Type="double" />
+    <Property Name="order_number" Type="int" />
+    <Property Name="pay_plan" Type="int" />
+    <Property Name="interest_rate" Type="int" />
+    <Property Name="setUpCharge" Type="double" />
+    <Property Name="other_contact" Type="varchar" MaxLength="20" />
+    <Property Name="other_designation" Type="varchar" MaxLength="30" />
+    <Property Name="other_mobile" Type="varchar" MaxLength="20" />
+    <Property Name="pricePerMem" Type="double" />
+    <Property Name="Discount" Type="double" />
+  </EntityType>
+  <EntityType Name="order_master">
+    <Key>
+      <PropertyRef Name="order_master_id" />
+    </Key>
+    <Property Name="order_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="club_name" Type="varchar" MaxLength="255" />
+    <Property Name="address" Type="varchar" MaxLength="255" />
+    <Property Name="club_president_name" Type="varchar" MaxLength="255" />
+    <Property Name="club_president_contact_no" Type="varchar" MaxLength="255" />
+    <Property Name="club_president_email_id" Type="varchar" MaxLength="255" />
+    <Property Name="club_secretary_name" Type="varchar" MaxLength="255" />
+    <Property Name="club_secretary_contact_no" Type="varchar" MaxLength="255" />
+    <Property Name="club_secretary_email_id" Type="varchar" MaxLength="255" />
+    <Property Name="license_for_year" Type="varchar" MaxLength="20" />
+    <Property Name="data_entry" Type="varchar" MaxLength="3" />
+    <Property Name="order_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="past_presidents">
+    <Key>
+      <PropertyRef Name="pk_past_president_id" />
+    </Key>
+    <Property Name="pk_past_president_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="member_name" Type="varchar" MaxLength="100" />
+    <Property Name="member_designation" Type="varchar" MaxLength="20" />
+    <Property Name="designation_year" Type="varchar" MaxLength="20" />
+    <Property Name="profile_photo" Type="varchar" MaxLength="300" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'def.row_production.payment_info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="payment_info">
+    <Key>
+      <PropertyRef Name="txn_Id" />
+    </Key>
+    <Property Name="txn_Id" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="txn_ref" Type="varchar" MaxLength="100" />
+    <Property Name="txn_status" Type="varchar" MaxLength="50" />
+    <Property Name="txn_message" Type="varchar" MaxLength="100" />
+    <Property Name="amount" Type="float" />
+    <Property Name="first_name" Type="varchar" MaxLength="50" />
+    <Property Name="last_name" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="500" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="zip_code" Type="varchar" MaxLength="20" />
+    <Property Name="mobile_number" Type="varchar" MaxLength="20" />
+    <Property Name="payment_mode" Type="varchar" MaxLength="20" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="club_name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="payment_master">
+    <Key>
+      <PropertyRef Name="txn_id" />
+    </Key>
+    <Property Name="txn_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstname" Type="varchar" MaxLength="100" />
+    <Property Name="lastname" Type="varchar" MaxLength="100" />
+    <Property Name="contact_no" Type="varchar" MaxLength="20" />
+    <Property Name="email_id" Type="varchar" MaxLength="100" />
+    <Property Name="currency" Type="varchar" MaxLength="10" />
+    <Property Name="actualAmount" Type="double" />
+    <Property Name="Amount" Type="double" />
+    <Property Name="service_tax" Type="double" />
+    <Property Name="grand_amt" Type="double" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="dollar_rate" Type="double" />
+    <Property Name="payment_link" Type="varchar" MaxLength="100" />
+    <Property Name="org_name" Type="varchar" MaxLength="100" />
+    <Property Name="payment_for" Type="varchar" MaxLength="100" />
+    <Property Name="address" Type="varchar" MaxLength="500" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="state" Type="varchar" MaxLength="50" />
+    <Property Name="zipcode" Type="varchar" MaxLength="10" />
+    <Property Name="remarks" Type="varchar" MaxLength="250" />
+    <Property Name="country" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rotary_library">
+    <Key>
+      <PropertyRef Name="pk_roray_library_id" />
+    </Key>
+    <Property Name="pk_roray_library_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="text" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="smallint" />
+  </EntityType>
+  <EntityType Name="rpt_project_report">
+    <Key>
+      <PropertyRef Name="Project_Report_Id" />
+    </Key>
+    <Property Name="Project_Report_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Project_Master_Id" Type="int" />
+    <Property Name="Executed_On" Type="varchar" MaxLength="600" />
+    <Property Name="Area_Focus" Type="varchar" MaxLength="200" />
+    <Property Name="Cost" Type="varchar" MaxLength="100" />
+    <Property Name="No_Benifi" Type="int" />
+    <Property Name="No_Partici" Type="int" />
+    <Property Name="District_officials" Type="varchar" MaxLength="500" />
+    <Property Name="Heading" Type="varchar" MaxLength="100" />
+    <Property Name="Actual_Month" Type="varchar" MaxLength="20" />
+    <Property Name="ChapterMasterID" Type="varchar" MaxLength="100" />
+    <Property Name="NoOfMemberPresent" Type="int" />
+    <Property Name="Avenuesofservice" Type="varchar" MaxLength="100" />
+    <Property Name="ProjectDescription" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rpt_report_detail">
+    <Key>
+      <PropertyRef Name="Report_Id" />
+    </Key>
+    <Property Name="Report_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Chapter_Master_Id" Type="int" />
+    <Property Name="Actual_Meeting_Dt" Type="varchar" MaxLength="20" />
+    <Property Name="Meeting_Type" Type="varchar" MaxLength="50" />
+    <Property Name="Speaker" Type="varchar" MaxLength="100" />
+    <Property Name="Subject" Type="varchar" MaxLength="200" />
+    <Property Name="Total_Mem" Type="int" />
+    <Property Name="Attend_Mem" Type="int" />
+    <Property Name="Per_Mem" Type="int" />
+    <Property Name="Actual_Month" Type="varchar" MaxLength="20" />
+    <Property Name="Expt_Meeting_Dt" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="rpt_tblclubtrf">
+    <Key>
+      <PropertyRef Name="TRFID" />
+    </Key>
+    <Property Name="TRFID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ChapterMasterID" Type="varchar" MaxLength="200" />
+    <Property Name="ContributorName" Type="varchar" MaxLength="200" />
+    <Property Name="Amount" Type="varchar" MaxLength="100" />
+    <Property Name="ActMonth" Type="varchar" MaxLength="200" />
+    <Property Name="IsDeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="service_directory">
+    <Key>
+      <PropertyRef Name="pk_service_id" />
+    </Key>
+    <Property Name="pk_service_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="int" />
+    <Property Name="fk_module_id" Type="int" />
+    <Property Name="member_name" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="text" />
+    <Property Name="image" Type="varchar" MaxLength="100" />
+    <Property Name="country_code1" Type="varchar" MaxLength="11" />
+    <Property Name="mobile_no1" Type="varchar" MaxLength="50" />
+    <Property Name="country_code2" Type="varchar" MaxLength="11" />
+    <Property Name="mobile_no2" Type="varchar" MaxLength="50" />
+    <Property Name="pax_no" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="keywords" Type="text" />
+    <Property Name="address" Type="mediumtext" />
+    <Property Name="adress_country" Type="varchar" MaxLength="100" />
+    <Property Name="city" Type="varchar" MaxLength="100" />
+    <Property Name="state" Type="varchar" MaxLength="100" />
+    <Property Name="zipcode" Type="varchar" MaxLength="50" />
+    <Property Name="latitude" Type="varchar" MaxLength="200" />
+    <Property Name="longitude" Type="varchar" MaxLength="200" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="settings_master">
+    <Key>
+      <PropertyRef Name="pk_setting_id" />
+    </Key>
+    <Property Name="pk_setting_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_module_master_id" Type="int" />
+    <Property Name="fk_member_profile_id" Type="int" />
+    <Property Name="notification_enable" Type="int" />
+    <Property Name="updated_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="single_field_master">
+    <Key>
+      <PropertyRef Name="pk_single_field_master_id" />
+    </Key>
+    <Property Name="pk_single_field_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="single_field_type" Type="varchar" MaxLength="50" />
+    <Property Name="english" Type="varchar" MaxLength="50" />
+    <Property Name="french" Type="varchar" MaxLength="50" />
+    <Property Name="hindi" Type="varchar" MaxLength="50" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="subgroup_details">
+    <Key>
+      <PropertyRef Name="pk_subgroup_details_id" />
+    </Key>
+    <Property Name="pk_subgroup_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_subgroup_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="isdeleted" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+  </EntityType>
+  <EntityType Name="subgroup_master">
+    <Key>
+      <PropertyRef Name="pk_subgroup_id" />
+    </Key>
+    <Property Name="pk_subgroup_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="subgroup_title" Type="varchar" MaxLength="200" />
+    <Property Name="subgrp_type" Type="varchar" MaxLength="50" />
+    <Property Name="Desc" Type="text" />
+    <Property Name="subgroup_img" Type="varchar" />
+    <Property Name="fk_subgrp_ParentID" Type="int" />
+    <Property Name="fk_Admin_ProfileID" Type="int" />
+    <Property Name="Level" Type="int" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="Modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="Deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="suggestfeature">
+    <Key>
+      <PropertyRef Name="suggestion_ID" />
+    </Key>
+    <Property Name="suggestion_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="fk_Member_ProfileID" Type="int" />
+    <Property Name="fk_group_Master_ID" Type="int" />
+    <Property Name="Created_on" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_exceptoinlog">
+    <Key>
+      <PropertyRef Name="pk_ExceptionAutoID" />
+    </Key>
+    <Property Name="pk_ExceptionAutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="excep_CurrentPageName" Type="varchar" MaxLength="50" />
+    <Property Name="excep_CurrentFunctionName" Type="varchar" MaxLength="100" />
+    <Property Name="excep_InnerException" Type="text" />
+    <Property Name="excep_Message" Type="varchar" MaxLength="500" />
+    <Property Name="excep_StackTrace" Type="text" />
+    <Property Name="excep_Recorddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="touchbase_versionmaster">
+    <Key>
+      <PropertyRef Name="pk_VID" />
+    </Key>
+    <Property Name="pk_VID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Android" Type="varchar" MaxLength="20" />
+    <Property Name="IOS" Type="varchar" MaxLength="20" />
+    <Property Name="DotNetVersion" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Creation_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="weblink_master">
+    <Key>
+      <PropertyRef Name="pk_master_id" />
+    </Key>
+    <Property Name="pk_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="link_title" Type="varchar" MaxLength="200" />
+    <Property Name="link_description" Type="text" />
+    <Property Name="link_url" Type="varchar" MaxLength="200" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'def.row_production.results' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="results">
+        <Property Name="pk_subgroup_id" Type="int" />
+        <Property Name="fk_Admin_ProfileID" Type="int" />
+        <Property Name="fk_subgrp_ParentID" Type="int" />
+        <Property Name="fk_group_id" Type="int" />
+        <Property Name="module" Type="varchar" MaxLength="20" />
+      </EntityType>-->
+</Schema>

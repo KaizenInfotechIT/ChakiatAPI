@@ -1,0 +1,1647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="touchbaseModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="touchbaseModelStoreContainer">
+    <EntitySet Name="announcements_details" EntityType="touchbaseModel.Store.announcements_details" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="announcements_master" EntityType="touchbaseModel.Store.announcements_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="country_master" EntityType="touchbaseModel.Store.country_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="deletedimages" EntityType="touchbaseModel.Store.deletedimages" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="document_details" EntityType="touchbaseModel.Store.document_details" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="document_safe" EntityType="touchbaseModel.Store.document_safe" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="event_details" EntityType="touchbaseModel.Store.event_details" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="event_details_member_response" EntityType="touchbaseModel.Store.event_details_member_response" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="event_master" EntityType="touchbaseModel.Store.event_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="event_question_options" EntityType="touchbaseModel.Store.event_question_options" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="event_questionnaire_master" EntityType="touchbaseModel.Store.event_questionnaire_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="event_repeatdate" EntityType="touchbaseModel.Store.event_repeatdate" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_admin_members" EntityType="touchbaseModel.Store.group_admin_members" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_category_master" EntityType="touchbaseModel.Store.group_category_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_dynamic_fields" EntityType="touchbaseModel.Store.group_dynamic_fields" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_info" EntityType="touchbaseModel.Store.group_info" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_master" EntityType="touchbaseModel.Store.group_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_member_fields" EntityType="touchbaseModel.Store.group_member_fields" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_memberfield_lookup" EntityType="touchbaseModel.Store.group_memberfield_lookup" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="group_modules" EntityType="touchbaseModel.Store.group_modules" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="image_table" EntityType="touchbaseModel.Store.image_table" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="language_label" EntityType="touchbaseModel.Store.language_label" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="language_master" EntityType="touchbaseModel.Store.language_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="main_member_master" EntityType="touchbaseModel.Store.main_member_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="member_address_detail" EntityType="touchbaseModel.Store.member_address_detail" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="member_dashboard" EntityType="touchbaseModel.Store.member_dashboard" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="member_family_master" EntityType="touchbaseModel.Store.member_family_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="member_log" EntityType="touchbaseModel.Store.member_log" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="member_master_profile" EntityType="touchbaseModel.Store.member_master_profile" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="member_profile_dynamic_fields" EntityType="touchbaseModel.Store.member_profile_dynamic_fields" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="module_master" EntityType="touchbaseModel.Store.module_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="newsletter_details" EntityType="touchbaseModel.Store.newsletter_details" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="newsletter_master" EntityType="touchbaseModel.Store.newsletter_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="notification_flag" EntityType="touchbaseModel.Store.notification_flag" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="settings_master" EntityType="touchbaseModel.Store.settings_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="single_field_master" EntityType="touchbaseModel.Store.single_field_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="subgroup_details" EntityType="touchbaseModel.Store.subgroup_details" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="subgroup_master" EntityType="touchbaseModel.Store.subgroup_master" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="suggestfeature" EntityType="touchbaseModel.Store.suggestfeature" store:Type="Tables" Schema="touchbase" />
+    <EntitySet Name="touchbase_versionmaster" EntityType="touchbaseModel.Store.touchbase_versionmaster" store:Type="Tables" Schema="touchbase" />
+  </EntityContainer>
+  <EntityType Name="announcements_details">
+    <Key>
+      <PropertyRef Name="pk_announcements_details_id" />
+    </Key>
+    <Property Name="pk_announcements_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_announcements_master_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="varchar" MaxLength="4" />
+    <Property Name="ann_not_sent" Type="varchar" MaxLength="5" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="announcements_master">
+    <Key>
+      <PropertyRef Name="pk_announcements_master_id" />
+    </Key>
+    <Property Name="pk_announcements_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="announcements_desc" Type="text" />
+    <Property Name="announcements_title" Type="varchar" MaxLength="2000" />
+    <Property Name="announcement_img" Type="varchar" />
+    <Property Name="notification_date" Type="datetime" />
+    <Property Name="notification_time" Type="time" />
+    <Property Name="publish_date" Type="datetime" />
+    <Property Name="publish_time" Type="time" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="notification_sent" Type="varchar" MaxLength="10" />
+    <Property Name="blood_group" Type="varchar" MaxLength="10" />
+    <Property Name="announcement_type" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_flag" Type="varchar" MaxLength="3" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="send_sms_all_flag" Type="varchar" MaxLength="3" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="country_master">
+    <Key>
+      <PropertyRef Name="country_master_id" />
+    </Key>
+    <Property Name="country_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="country_master_name" Type="varchar" MaxLength="255" />
+    <Property Name="country_code" Type="varchar" MaxLength="10" />
+    <Property Name="GMT_Opt" Type="varchar" MaxLength="2" />
+    <Property Name="GMT_Time" Type="time" />
+  </EntityType>
+  <EntityType Name="deletedimages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImageName" Type="varchar" MaxLength="200" />
+    <Property Name="ImagePath" Type="text" />
+    <Property Name="FileDelete" Type="int" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="20" />
+    <Property Name="deletedOn" Type="date" />
+    <Property Name="fk_group_master_id" Type="int" />
+  </EntityType>
+  <EntityType Name="document_details">
+    <Key>
+      <PropertyRef Name="pk_document_details_id" />
+    </Key>
+    <Property Name="pk_document_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_document_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="int" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="document_safe">
+    <Key>
+      <PropertyRef Name="pk_document_id" />
+    </Key>
+    <Property Name="pk_document_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="document_title" Type="varchar" MaxLength="100" />
+    <Property Name="document_path" Type="varchar" MaxLength="200" />
+    <Property Name="document_type" Type="varchar" MaxLength="50" />
+    <Property Name="document_ext" Type="varchar" MaxLength="50" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modify_by" Type="int" />
+    <Property Name="modify_on" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="event_details">
+    <Key>
+      <PropertyRef Name="pk_event_detail_id" />
+    </Key>
+    <Property Name="pk_event_detail_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="fk_SubGroupMaster_Id" Type="int" />
+    <Property Name="fk_member_master_id" Type="int" />
+    <Property Name="event_child_flag" Type="varchar" MaxLength="10" />
+    <Property Name="event_child_people" Type="int" />
+    <Property Name="event_response_date" Type="date" />
+    <Property Name="event_read_flag" Type="int" />
+    <Property Name="event_notification_sent" Type="tinyint" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="event_details_member_response">
+    <Key>
+      <PropertyRef Name="PK_memberResponse_Id" />
+    </Key>
+    <Property Name="PK_memberResponse_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fk_Event_Details_Id" Type="int" />
+    <Property Name="Fk_Event_Question_ID" Type="int" />
+    <Property Name="Answer" Type="text" />
+    <Property Name="ResponseDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="event_master">
+    <Key>
+      <PropertyRef Name="pk_event_master_id" />
+    </Key>
+    <Property Name="pk_event_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_subgroup_master_id" Type="int" />
+    <Property Name="event_title" Type="varchar" MaxLength="2000" />
+    <Property Name="event_desc" Type="text" />
+    <Property Name="event_img" Type="varchar" />
+    <Property Name="event_date" Type="datetime" />
+    <Property Name="event_time" Type="varchar" MaxLength="10" />
+    <Property Name="event_venue" Type="varchar" MaxLength="250" />
+    <Property Name="venue_lat" Type="varchar" MaxLength="20" />
+    <Property Name="venue_long" Type="varchar" MaxLength="20" />
+    <Property Name="publish_Date" Type="datetime" />
+    <Property Name="publish_Time" Type="varchar" MaxLength="20" />
+    <Property Name="expiry_Date" Type="datetime" />
+    <Property Name="expiry_Time" Type="varchar" MaxLength="20" />
+    <Property Name="event_cut_off_date" Type="datetime" />
+    <Property Name="notification_start_date" Type="datetime" />
+    <Property Name="notification_start_time" Type="varchar" MaxLength="10" />
+    <Property Name="event_enable" Type="varchar" MaxLength="10" />
+    <Property Name="questionEnable" Type="int" />
+    <Property Name="event_type" Type="varchar" MaxLength="10" />
+    <Property Name="notification_sent" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_flag" Type="varchar" MaxLength="10" />
+    <Property Name="send_sms_all_flag" Type="varchar" MaxLength="10" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="event_question_options">
+    <Key>
+      <PropertyRef Name="pk_optionID" />
+    </Key>
+    <Property Name="pk_optionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_questionID" Type="int" />
+    <Property Name="optionText" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="event_questionnaire_master">
+    <Key>
+      <PropertyRef Name="pk_event_questionID" />
+    </Key>
+    <Property Name="pk_event_questionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_ID" Type="int" />
+    <Property Name="question_type" Type="int" />
+    <Property Name="question_text" Type="text" />
+    <Property Name="option1" Type="varchar" />
+    <Property Name="option2" Type="varchar" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="Created_by" Type="int" />
+    <Property Name="Isdeleted" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="deleted_by" Type="int" />
+  </EntityType>
+  <EntityType Name="event_repeatdate">
+    <Key>
+      <PropertyRef Name="pk_event_repeatdate_id" />
+    </Key>
+    <Property Name="pk_event_repeatdate_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_id" Type="int" />
+    <Property Name="Repeat_date" Type="datetime" />
+    <Property Name="repeat_time" Type="varchar" MaxLength="10" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="group_admin_members">
+    <Key>
+      <PropertyRef Name="pk_group_admin_id" />
+    </Key>
+    <Property Name="pk_group_admin_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_member_master_id" Type="int" />
+    <Property Name="pwd" Type="varchar" MaxLength="40" />
+    <Property Name="mobile_no" Type="varchar" MaxLength="20" />
+    <Property Name="user_Role" Type="varchar" MaxLength="20" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="date" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deletion_date" Type="date" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="group_category_master">
+    <Key>
+      <PropertyRef Name="group_category_id" />
+    </Key>
+    <Property Name="group_category_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="varchar" MaxLength="50" />
+    <Property Name="flag" Type="int" />
+  </EntityType>
+  <EntityType Name="group_dynamic_fields">
+    <Key>
+      <PropertyRef Name="pk_fieldID" />
+    </Key>
+    <Property Name="pk_fieldID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="Field_Title" Type="varchar" MaxLength="50" />
+    <Property Name="Field_Value" Type="varchar" MaxLength="500" />
+    <Property Name="Created_By" Type="int" />
+    <Property Name="Created_on" Type="datetime" />
+    <Property Name="Modified_On" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Isdeleted" Type="int" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deleted_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="group_info">
+    <Key>
+      <PropertyRef Name="pk_grpinfo_id" />
+    </Key>
+    <Property Name="pk_grpinfo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="200" />
+    <Property Name="description" Type="varchar" MaxLength="5000" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="group_master">
+    <Key>
+      <PropertyRef Name="pk_group_master_id" />
+    </Key>
+    <Property Name="pk_group_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="group_name" Type="varchar" MaxLength="100" />
+    <Property Name="group_type" Type="varchar" MaxLength="20" />
+    <Property Name="group_category" Type="varchar" MaxLength="30" />
+    <Property Name="address1" Type="varchar" MaxLength="2000" />
+    <Property Name="address2" Type="varchar" MaxLength="100" />
+    <Property Name="group_email" Type="varchar" MaxLength="100" />
+    <Property Name="pincode" Type="varchar" MaxLength="20" />
+    <Property Name="fk_state_master_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_city_master_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_country_master_id" Type="int" />
+    <Property Name="contact_no" Type="varchar" MaxLength="255" />
+    <Property Name="club_history" Type="text" />
+    <Property Name="memberCount" Type="bigint" />
+    <Property Name="fromDate" Type="datetime" />
+    <Property Name="toDate" Type="datetime" />
+    <Property Name="club_image" Type="varchar" MaxLength="245" />
+    <Property Name="club_website" Type="varchar" MaxLength="100" />
+    <Property Name="bdayann_smsreq" Type="int" />
+    <Property Name="club_rules" Type="text" />
+    <Property Name="club_bylaws" Type="text" />
+    <Property Name="SMSCount" Type="bigint" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="group_member_fields">
+    <Key>
+      <PropertyRef Name="pk_group_member_fields_id" />
+    </Key>
+    <Property Name="pk_group_member_fields_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" Nullable="false" />
+    <Property Name="field_name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="order_by" Type="int" Nullable="false" />
+    <Property Name="sub_module_name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group_memberfield_lookup">
+    <Key>
+      <PropertyRef Name="pk_lookupId" />
+    </Key>
+    <Property Name="pk_lookupId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Id" Type="int" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="50" />
+    <Property Name="DBColumnName" Type="varchar" MaxLength="50" />
+    <Property Name="ColType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="group_modules">
+    <Key>
+      <PropertyRef Name="pk_group_modules_id" />
+    </Key>
+    <Property Name="pk_group_modules_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_module_master_id" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="image_table">
+    <Key>
+      <PropertyRef Name="pk_image_id" />
+    </Key>
+    <Property Name="pk_image_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Image_name" Type="varchar" MaxLength="100" />
+    <Property Name="Module_name" Type="varchar" MaxLength="100" />
+    <Property Name="File_type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="language_label">
+    <Key>
+      <PropertyRef Name="pk_language_label_id" />
+    </Key>
+    <Property Name="pk_language_label_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="label" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="english" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="french" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="hindi" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="language_master">
+    <Key>
+      <PropertyRef Name="pk_language_master_id" />
+    </Key>
+    <Property Name="pk_language_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="language_name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="display_name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="main_member_master">
+    <Key>
+      <PropertyRef Name="pk_main_member_master_id" />
+    </Key>
+    <Property Name="pk_main_member_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="member_name" Type="varchar" MaxLength="250" />
+    <Property Name="member_mobile" Type="varchar" MaxLength="50" />
+    <Property Name="fk_country_id" Type="int" />
+    <Property Name="ProfilePic_Path" Type="varchar" MaxLength="500" />
+    <Property Name="member_emailid" Type="varchar" MaxLength="50" />
+    <Property Name="IMEI_No" Type="varchar" MaxLength="500" />
+    <Property Name="DeviceToken" Type="varchar" MaxLength="500" />
+    <Property Name="Device_name" Type="varchar" MaxLength="100" />
+    <Property Name="versionNo" Type="varchar" MaxLength="500" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="member_address_detail">
+    <Key>
+      <PropertyRef Name="pk_address_id" />
+    </Key>
+    <Property Name="pk_address_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_profile_id" Type="int" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="Address" Type="varchar" />
+    <Property Name="fk_city_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_state_id" Type="varchar" MaxLength="100" />
+    <Property Name="fk_country_id" Type="int" />
+    <Property Name="pincode" Type="varchar" MaxLength="20" />
+    <Property Name="phone_no" Type="varchar" MaxLength="20" />
+    <Property Name="fax" Type="varchar" MaxLength="20" />
+    <Property Name="Address_Type" Type="varchar" MaxLength="20" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="created_By" Type="int" />
+    <Property Name="modified_on" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="Isdeleted" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="BusinessName" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="member_dashboard">
+    <Key>
+      <PropertyRef Name="pk_dashboard_ID" />
+    </Key>
+    <Property Name="pk_dashboard_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_master_profile_ID" Type="int" />
+    <Property Name="fk_ModuleID" Type="int" />
+    <Property Name="modification_Date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Isdeleted" Type="tinyint" />
+    <Property Name="deletion_date" Type="date" />
+  </EntityType>
+  <EntityType Name="member_family_master">
+    <Key>
+      <PropertyRef Name="pk_member_family_master_id" />
+    </Key>
+    <Property Name="pk_member_family_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_member_master_id" Type="int" />
+    <Property Name="member_name" Type="varchar" MaxLength="255" />
+    <Property Name="member_relationship" Type="varchar" MaxLength="50" />
+    <Property Name="member_contact_no" Type="varchar" MaxLength="255" />
+    <Property Name="member_date_of_birth" Type="date" />
+    <Property Name="member_date_of_wedding" Type="date" />
+    <Property Name="member_blood_group" Type="varchar" MaxLength="255" />
+    <Property Name="EmailId" Type="varchar" MaxLength="100" />
+    <Property Name="particulars" Type="varchar" MaxLength="255" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="member_log">
+    <Key>
+      <PropertyRef Name="pk_member_log_id" />
+    </Key>
+    <Property Name="pk_member_log_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_master_profile_id" Type="int" Nullable="false" />
+    <Property Name="fk_module_master_id" Type="int" Nullable="false" />
+    <Property Name="visit_date_time" Type="datetime" Nullable="false" />
+    <Property Name="creation_date" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="int" Nullable="false" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" Nullable="false" />
+    <Property Name="deletion_date" Type="datetime" Nullable="false" />
+    <Property Name="deleted_by" Type="int" Nullable="false" />
+    <Property Name="isdeleted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="member_master_profile">
+    <Key>
+      <PropertyRef Name="pk_member_master_profile_id" />
+    </Key>
+    <Property Name="pk_member_master_profile_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" Nullable="false" />
+    <Property Name="fk_main_member_master_id" Type="int" Nullable="false" />
+    <Property Name="member_name" Type="varchar" MaxLength="50" />
+    <Property Name="blood_Group" Type="varchar" MaxLength="10" />
+    <Property Name="member_date_of_issue" Type="date" />
+    <Property Name="member_phone_no" Type="varchar" MaxLength="20" />
+    <Property Name="fk_country_ID" Type="int" />
+    <Property Name="member_mobile_no" Type="varchar" MaxLength="20" />
+    <Property Name="secondry_mobile_no" Type="varchar" MaxLength="255" />
+    <Property Name="member_fax_no" Type="varchar" MaxLength="20" />
+    <Property Name="group_category" Type="varchar" MaxLength="200" />
+    <Property Name="member_email_id" Type="varchar" MaxLength="50" />
+    <Property Name="member_date_of_birth" Type="date" />
+    <Property Name="member_family_photo_path" Type="varchar" />
+    <Property Name="member_profile_photo_path" Type="varchar" />
+    <Property Name="member_profile_status" Type="varchar" MaxLength="200" />
+    <Property Name="member_date_of_wedding" Type="date" />
+    <Property Name="designation" Type="varchar" />
+    <Property Name="member_buss_email" Type="varchar" MaxLength="255" />
+    <Property Name="user_role" Type="varchar" MaxLength="255" />
+    <Property Name="app_device_token_id" Type="varchar" MaxLength="250" />
+    <Property Name="device_name" Type="varchar" MaxLength="11" />
+    <Property Name="notification_enable" Type="varchar" MaxLength="100" />
+    <Property Name="metataging" Type="varchar" MaxLength="250" />
+    <Property Name="IsBussDetailVisible" Type="int" />
+    <Property Name="IsPersonalDetailVisible" Type="int" />
+    <Property Name="IsFamilyDetailVisi1ble" Type="int" />
+    <Property Name="IsMobileVisible" Type="int" />
+    <Property Name="IsEmailVisible" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="member_profile_dynamic_fields">
+    <Key>
+      <PropertyRef Name="pk_fieldID" />
+    </Key>
+    <Property Name="pk_fieldID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Field_value" Type="varchar" MaxLength="30" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="deleted_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="module_master">
+    <Key>
+      <PropertyRef Name="pk_module_master_id" />
+    </Key>
+    <Property Name="pk_module_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="module_name" Type="varchar" MaxLength="20" />
+    <Property Name="module_static_ref" Type="varchar" MaxLength="20" />
+    <Property Name="module_price_rs" Type="float" />
+    <Property Name="module_price_usd" Type="float" />
+    <Property Name="image" Type="varchar" MaxLength="30" />
+    <Property Name="module_info" Type="text" />
+    <Property Name="phase" Type="int" Nullable="false" />
+    <Property Name="priority" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="newsletter_details">
+    <Key>
+      <PropertyRef Name="pk_newsletter_details_id" />
+    </Key>
+    <Property Name="pk_newsletter_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_newsletter_master_id" Type="int" />
+    <Property Name="fk_member_master_id" Type="int" />
+    <Property Name="fk_sub_group_id" Type="int" />
+    <Property Name="read_flag" Type="text" />
+    <Property Name="Notification_sent" Type="int" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="newsletter_master">
+    <Key>
+      <PropertyRef Name="pk_newsletter_master_id" />
+    </Key>
+    <Property Name="pk_newsletter_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="newsletter_date" Type="datetime" />
+    <Property Name="publish_date" Type="datetime" />
+    <Property Name="publish_time" Type="time" />
+    <Property Name="newsletter_link" Type="varchar" />
+    <Property Name="newsletter_filepath" Type="varchar" />
+    <Property Name="newsletter_title" Type="varchar" />
+    <Property Name="newsletter_type" Type="varchar" MaxLength="20" />
+    <Property Name="expiry_date" Type="datetime" />
+    <Property Name="send_SMS_Flag" Type="int" />
+    <Property Name="newsletter_from" Type="varchar" MaxLength="10" />
+    <Property Name="creation_date" Type="datetime" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="isdeleted" Type="bool" />
+    <Property Name="send_SMS_all_Flag" Type="int" />
+  </EntityType>
+  <EntityType Name="notification_flag">
+    <Key>
+      <PropertyRef Name="notification_flag_id" />
+    </Key>
+    <Property Name="notification_flag_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="app_device_token_id" Type="text" />
+    <Property Name="module_name" Type="varchar" MaxLength="20" />
+    <Property Name="not_desc" Type="text" />
+    <Property Name="last_updated_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="inc" Type="int" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="memberId" Type="int" />
+  </EntityType>
+  <EntityType Name="settings_master">
+    <Key>
+      <PropertyRef Name="pk_setting_id" />
+    </Key>
+    <Property Name="pk_setting_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="fk_module_master_id" Type="int" />
+    <Property Name="fk_member_profile_id" Type="int" />
+    <Property Name="notification_enable" Type="int" />
+    <Property Name="updated_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="single_field_master">
+    <Key>
+      <PropertyRef Name="pk_single_field_master_id" />
+    </Key>
+    <Property Name="pk_single_field_master_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="single_field_type" Type="varchar" MaxLength="50" />
+    <Property Name="english" Type="varchar" MaxLength="50" />
+    <Property Name="french" Type="varchar" MaxLength="50" />
+    <Property Name="hindi" Type="varchar" MaxLength="50" />
+    <Property Name="isdeleted" Type="int" />
+  </EntityType>
+  <EntityType Name="subgroup_details">
+    <Key>
+      <PropertyRef Name="pk_subgroup_details_id" />
+    </Key>
+    <Property Name="pk_subgroup_details_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_subgroup_id" Type="int" />
+    <Property Name="fk_member_master_profile_id" Type="int" />
+    <Property Name="isdeleted" Type="int" />
+    <Property Name="deletion_date" Type="datetime" />
+    <Property Name="deleted_by" Type="int" />
+  </EntityType>
+  <EntityType Name="subgroup_master">
+    <Key>
+      <PropertyRef Name="pk_subgroup_id" />
+    </Key>
+    <Property Name="pk_subgroup_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="int" />
+    <Property Name="subgroup_title" Type="varchar" MaxLength="200" />
+    <Property Name="Desc" Type="text" />
+    <Property Name="subgroup_img" Type="varchar" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="creation_date" Type="date" />
+    <Property Name="modified_by" Type="int" />
+    <Property Name="Modification_date" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="int" />
+    <Property Name="Deletion_date" Type="date" />
+    <Property Name="isdeleted" Type="tinyint" />
+    <Property Name="fk_subgrp_ParentID" Type="int" />
+    <Property Name="fk_Admin_ProfileID" Type="int" />
+  </EntityType>
+  <EntityType Name="suggestfeature">
+    <Key>
+      <PropertyRef Name="suggestion_ID" />
+    </Key>
+    <Property Name="suggestion_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="fk_Member_ProfileID" Type="int" />
+    <Property Name="fk_group_Master_ID" Type="int" />
+    <Property Name="Created_on" Type="date" />
+  </EntityType>
+  <EntityType Name="touchbase_versionmaster">
+    <Key>
+      <PropertyRef Name="pk_VID" />
+    </Key>
+    <Property Name="pk_VID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Android" Type="varchar" MaxLength="20" />
+    <Property Name="IOS" Type="varchar" MaxLength="20" />
+    <Property Name="Creation_date" Type="date" />
+  </EntityType>
+  <Function Name="api_getRSVP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="MemberID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="member_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="name" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="masterUID" Type="varchar" Mode="In" />
+    <Parameter Name="UpdatedOn" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="split_string" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="stringToSplit" Type="text" Mode="In" />
+    <Parameter Name="sign" Type="varchar" Mode="In" />
+    <Parameter Name="position" Type="int" Mode="In" />
+  </Function>
+  <Function Name="strip_tags" ReturnType="text" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="str" Type="text" Mode="In" />
+  </Function>
+  <Function Name="UPD_Category" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="other" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_City" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="city" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_Classification" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="classification" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_Country" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="country" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_DateFormat" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="date" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_Designation" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="Designation" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_member_dashboard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberProfileId" Type="varchar" Mode="In" />
+    <Parameter Name="modulelist" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UPD_State" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="state" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAddAnnouncement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="annID" Type="varchar" Mode="In" />
+    <Parameter Name="annType" Type="varchar" Mode="In" />
+    <Parameter Name="announTitle" Type="varchar" Mode="In" />
+    <Parameter Name="announceDEsc" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="announcementImg" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAddDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="docID" Type="varchar" Mode="In" />
+    <Parameter Name="documentType" Type="varchar" Mode="In" />
+    <Parameter Name="documentTitle" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="documentFileId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAddEbulletin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="bulletinID" Type="varchar" Mode="In" />
+    <Parameter Name="bulletinType" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinTitle" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinlink" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinfile" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAddEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="questionEnable" Type="varchar" Mode="In" />
+    <Parameter Name="eventType" Type="varchar" Mode="In" />
+    <Parameter Name="membersIDs" Type="varchar" Mode="In" />
+    <Parameter Name="eventImageID" Type="varchar" Mode="In" />
+    <Parameter Name="evntTitle" Type="varchar" Mode="In" />
+    <Parameter Name="evntDesc" Type="text" Mode="In" />
+    <Parameter Name="eventVenue" Type="varchar" Mode="In" />
+    <Parameter Name="venueLat" Type="varchar" Mode="In" />
+    <Parameter Name="venueLong" Type="varchar" Mode="In" />
+    <Parameter Name="evntDate" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="notifyDate" Type="varchar" Mode="In" />
+    <Parameter Name="notifyTime" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="rsvpRepeatDate" Type="varchar" Mode="In" />
+    <Parameter Name="questionText" Type="varchar" Mode="In" />
+    <Parameter Name="questionType" Type="varchar" Mode="In" />
+    <Parameter Name="option1" Type="varchar" Mode="In" />
+    <Parameter Name="option2" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAddMemberToGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberName" Type="varchar" Mode="In" />
+    <Parameter Name="memberMobile" Type="varchar" Mode="In" />
+    <Parameter Name="groupMasterId" Type="varchar" Mode="In" />
+    <Parameter Name="countryId" Type="varchar" Mode="In" />
+    <Parameter Name="memberEmail" Type="varchar" Mode="In" />
+    <Parameter Name="createdBy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPAddModules" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="moduleIDs" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="memberCount" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAddSubGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="createdBy" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAdd_Image" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="fileName" Type="varchar" Mode="In" />
+    <Parameter Name="moduleName" Type="varchar" Mode="In" />
+    <Parameter Name="filetype" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAnsweringEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="profileID" Type="int" Mode="In" />
+    <Parameter Name="eventId" Type="int" Mode="In" />
+    <Parameter Name="joiningStatus" Type="varchar" Mode="In" />
+    <Parameter Name="questionId" Type="varchar" Mode="In" />
+    <Parameter Name="answer" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPAnsweringEventWithQues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpuserID" Type="int" Mode="In" />
+    <Parameter Name="eventId" Type="int" Mode="In" />
+    <Parameter Name="joiningStatus" Type="varchar" Mode="In" />
+    <Parameter Name="QuestionType" Type="int" Mode="In" />
+    <Parameter Name="QuestionID" Type="int" Mode="In" />
+    <Parameter Name="Answer" Type="varchar" Mode="In" />
+    <Parameter Name="optionID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPDeleteGroupCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="mainmemberId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPDeleteGroupMember" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPEventSearchBYText" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="filterType" Type="int" Mode="In" />
+    <Parameter Name="Admin" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPGetAllCountryList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase" />
+  <Function Name="USPGetAllGroupCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase" />
+  <Function Name="USPGetAllGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetAllGroupListNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="imei_No" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetAnnouncementDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="announID" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetAnnouncementList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <Parameter Name="isAdmin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetBdayAnnList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="date" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetBusinessGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetDirectoryDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberProfileId" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetDirectoryList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="masterUID" Type="int" Mode="In" />
+    <Parameter Name="groupID" Type="int" Mode="In" />
+    <Parameter Name="SearchText" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetDocumentList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetEbulletinDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="EbullID" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetEbulletinList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <Parameter Name="isAdmin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetEventList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetEventListDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="groupProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetGroupInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberMainId" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetGroupModuleList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupID" Type="varchar" Mode="In" />
+    <Parameter Name="masterProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetGroupModuleListOld" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupID" Type="varchar" Mode="In" />
+    <Parameter Name="masterProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetGroupSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="int" Mode="In" />
+    <Parameter Name="profileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPGetMemberDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="GrpUserId" Type="int" Mode="In" />
+    <Parameter Name="GrpID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPGetMemberFamilyDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="GrpUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPGetModuleList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase" />
+  <Function Name="USPGetPersonalGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetSocialGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetSubGroupDetailList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="subGrpId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetSubGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGetTouchbaseSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="mainMasterId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USPGlobalSearchProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="otherMemID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPGroupSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="GrpId" Type="varchar" Mode="In" />
+    <Parameter Name="ModuleId" Type="varchar" Mode="In" />
+    <Parameter Name="profileId" Type="varchar" Mode="In" />
+    <Parameter Name="UpdatedValue" Type="varchar" Mode="In" />
+    <Parameter Name="isMob" Type="varchar" Mode="In" />
+    <Parameter Name="isEmail" Type="varchar" Mode="In" />
+    <Parameter Name="isPersonal" Type="varchar" Mode="In" />
+    <Parameter Name="isFamily" Type="varchar" Mode="In" />
+    <Parameter Name="isBusiness" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPMembersDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="masterUID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPRemoveSelfFromGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPTouchbaseSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="updateValue" Type="varchar" Mode="In" />
+    <Parameter Name="mainMstId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPUpdateAddressDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="addressID" Type="varchar" Mode="In" />
+    <Parameter Name="addressType" Type="varchar" Mode="In" />
+    <Parameter Name="address" Type="varchar" Mode="In" />
+    <Parameter Name="city" Type="varchar" Mode="In" />
+    <Parameter Name="state" Type="varchar" Mode="In" />
+    <Parameter Name="country" Type="varchar" Mode="In" />
+    <Parameter Name="pincode" Type="varchar" Mode="In" />
+    <Parameter Name="phoneNo" Type="varchar" Mode="In" />
+    <Parameter Name="fax" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="groupID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPUpdateDeviceToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="dToken" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPUpdatedGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberProId" Type="varchar" Mode="In" />
+    <Parameter Name="grpcategory" Type="varchar" Mode="In" />
+    <Parameter Name="mainMasterId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPUpdateFamilyDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="familyMemberId" Type="varchar" Mode="In" />
+    <Parameter Name="memberName" Type="varchar" Mode="In" />
+    <Parameter Name="relationship" Type="varchar" Mode="In" />
+    <Parameter Name="dOB" Type="varchar" Mode="In" />
+    <Parameter Name="anniversary" Type="varchar" Mode="In" />
+    <Parameter Name="contactNo" Type="varchar" Mode="In" />
+    <Parameter Name="particulars" Type="text" Mode="In" />
+    <Parameter Name="bloodGroup" Type="varchar" Mode="In" />
+    <Parameter Name="emailId" Type="varchar" Mode="In" />
+    <Parameter Name="profileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USPUpdateMemberDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="mem_name" Type="varchar" Mode="In" />
+    <Parameter Name="mem_email" Type="varchar" Mode="In" />
+    <Parameter Name="image_Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_CreateGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="group_master_id" Type="int" Mode="In" />
+    <Parameter Name="grpImageID" Type="varchar" Mode="In" />
+    <Parameter Name="group_name" Type="varchar" Mode="In" />
+    <Parameter Name="group_type" Type="varchar" Mode="In" />
+    <Parameter Name="group_category" Type="varchar" Mode="In" />
+    <Parameter Name="address1" Type="varchar" Mode="In" />
+    <Parameter Name="address2" Type="varchar" Mode="In" />
+    <Parameter Name="city" Type="varchar" Mode="In" />
+    <Parameter Name="state" Type="varchar" Mode="In" />
+    <Parameter Name="pincode" Type="varchar" Mode="In" />
+    <Parameter Name="country" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="mobileno" Type="varchar" Mode="In" />
+    <Parameter Name="emailid" Type="varchar" Mode="In" />
+    <Parameter Name="website" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_DeleteModuleName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="typeID" Type="int" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <Parameter Name="profileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_DeleteTempProcedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="group_master_id" Type="int" Mode="In" />
+    <Parameter Name="group_name" Type="varchar" Mode="InOut" />
+    <Parameter Name="group_name2" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="USP_UploadFoto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="fileName" Type="varchar" Mode="In" />
+    <Parameter Name="profileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPAddAnnouncement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="annID" Type="varchar" Mode="In" />
+    <Parameter Name="annType" Type="varchar" Mode="In" />
+    <Parameter Name="announTitle" Type="varchar" Mode="In" />
+    <Parameter Name="announceDEsc" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="announcementImg" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="sendSMSAll" Type="varchar" Mode="In" />
+    <Parameter Name="sendSMSNonSmartPh" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPAddDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="docID" Type="varchar" Mode="In" />
+    <Parameter Name="documentType" Type="varchar" Mode="In" />
+    <Parameter Name="documentTitle" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="documentFileId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPAddEbulletin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="bulletinID" Type="varchar" Mode="In" />
+    <Parameter Name="bulletinType" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinTitle" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinlink" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinfile" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="sendSMSAll" Type="varchar" Mode="In" />
+    <Parameter Name="sendSMSNonSmartPh" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPAddEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="questionEnable" Type="varchar" Mode="In" />
+    <Parameter Name="eventType" Type="varchar" Mode="In" />
+    <Parameter Name="membersIDs" Type="varchar" Mode="In" />
+    <Parameter Name="eventImageID" Type="varchar" Mode="In" />
+    <Parameter Name="evntTitle" Type="varchar" Mode="In" />
+    <Parameter Name="evntDesc" Type="text" Mode="In" />
+    <Parameter Name="eventVenue" Type="varchar" Mode="In" />
+    <Parameter Name="venueLat" Type="varchar" Mode="In" />
+    <Parameter Name="venueLong" Type="varchar" Mode="In" />
+    <Parameter Name="evntDate" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="notifyDate" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="sendSMSNonSmartPh" Type="varchar" Mode="In" />
+    <Parameter Name="sendSMSAll" Type="varchar" Mode="In" />
+    <Parameter Name="rsvpRepeatDate" Type="varchar" Mode="In" />
+    <Parameter Name="questionId" Type="varchar" Mode="In" />
+    <Parameter Name="questionText" Type="text" Mode="In" />
+    <Parameter Name="questionType" Type="varchar" Mode="In" />
+    <Parameter Name="option1" Type="varchar" Mode="In" />
+    <Parameter Name="option2" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPAddMemberToGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberName" Type="varchar" Mode="In" />
+    <Parameter Name="memberMobile" Type="varchar" Mode="In" />
+    <Parameter Name="groupMasterId" Type="varchar" Mode="In" />
+    <Parameter Name="countryId" Type="varchar" Mode="In" />
+    <Parameter Name="memberEmail" Type="varchar" Mode="In" />
+    <Parameter Name="createdBy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="V1_USPAddSuggestFeature" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="text" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="profileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetAllGroupCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase" />
+  <Function Name="V1_USPGetAllGroupListNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="imei_No" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetAnnouncementDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="announID" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetDirectoryList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="masterUID" Type="int" Mode="In" />
+    <Parameter Name="groupID" Type="int" Mode="In" />
+    <Parameter Name="SearchText" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetEventListDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="groupProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetGroupDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetGroupInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberMainId" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetGroupModuleList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupID" Type="varchar" Mode="In" />
+    <Parameter Name="masterProfileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USPGetModuleList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase" />
+  <Function Name="V1_USPGlobalSearchProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="otherMemID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USP_CreateGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="group_master_id" Type="int" Mode="In" />
+    <Parameter Name="grpImageID" Type="varchar" Mode="In" />
+    <Parameter Name="group_name" Type="varchar" Mode="In" />
+    <Parameter Name="group_type" Type="varchar" Mode="In" />
+    <Parameter Name="group_category" Type="varchar" Mode="In" />
+    <Parameter Name="address1" Type="varchar" Mode="In" />
+    <Parameter Name="address2" Type="varchar" Mode="In" />
+    <Parameter Name="city" Type="varchar" Mode="In" />
+    <Parameter Name="state" Type="varchar" Mode="In" />
+    <Parameter Name="pincode" Type="varchar" Mode="In" />
+    <Parameter Name="country" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="mobileno" Type="varchar" Mode="In" />
+    <Parameter Name="emailid" Type="varchar" Mode="In" />
+    <Parameter Name="website" Type="varchar" Mode="In" />
+    <Parameter Name="other" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_USP_DeleteImage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="typeID" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V1_WEBMemberProfileAddEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="MemProId" Type="int" Mode="InOut" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="membername" Type="varchar" Mode="In" />
+    <Parameter Name="Designation" Type="varchar" Mode="In" />
+    <Parameter Name="mobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="memberemailid" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="varchar" Mode="In" />
+    <Parameter Name="DOW" Type="varchar" Mode="In" />
+    <Parameter Name="CountryName" Type="varchar" Mode="In" />
+    <Parameter Name="SecMobNo" Type="varchar" Mode="In" />
+    <Parameter Name="AltEmailId" Type="varchar" Mode="In" />
+    <Parameter Name="ProfilePhoto" Type="varchar" Mode="In" />
+    <Parameter Name="FamilyPhoto" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+    <Parameter Name="MemberPerDetVisible" Type="int" Mode="In" />
+    <Parameter Name="MemberFamDetVisible" Type="int" Mode="In" />
+    <Parameter Name="RAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Rpincode" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_city_id" Type="varchar" Mode="In" />
+    <Parameter Name="Rphone_no" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_state_id" Type="varchar" Mode="In" />
+    <Parameter Name="BAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Bpincode" Type="varchar" Mode="In" />
+    <Parameter Name="Bfk_city_id" Type="varchar" Mode="In" />
+    <Parameter Name="Bfk_country_id" Type="varchar" Mode="In" />
+    <Parameter Name="BFaxNo" Type="varchar" Mode="In" />
+    <Parameter Name="BPhone_no" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_country_id" Type="varchar" Mode="In" />
+    <Parameter Name="BusinessName" Type="varchar" Mode="In" />
+    <Parameter Name="BussState" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_USPDeleteGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="profileID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_USPEntityInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_USPEventSearchBYText" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="filterType" Type="varchar" Mode="In" />
+    <Parameter Name="Admin" Type="varchar" Mode="In" />
+    <Parameter Name="SMS_Count" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="V2_USPGetAnnouncementList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <Parameter Name="isAdmin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_USPGetDocumentList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_USPGetEbulletinList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <Parameter Name="isAdmin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_USPGetEventListDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="groupProfileID" Type="varchar" Mode="In" />
+    <Parameter Name="SMSCount" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="V2_WEBAddEntityInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="titl" Type="text" Mode="In" />
+    <Parameter Name="description" Type="text" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="createBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V2_WEBAddSubGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="createdBy" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileId" Type="text" Mode="In" />
+    <Parameter Name="intSubGroupMasterID" Type="varchar" Mode="InOut" />
+    <Parameter Name="parentsubgrpID" Type="varchar" Mode="In" />
+    <Parameter Name="DeleteMemIDs" Type="varchar" Mode="In" />
+    <Parameter Name="childSubGrpID" Type="varchar" Mode="In" />
+    <Parameter Name="AdminID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="V3_USPGetAllGroupListNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="memberId" Type="varchar" Mode="In" />
+    <Parameter Name="imei_No" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBAddDocumentSafe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="intDocumentID" Type="int" Mode="InOut" />
+    <Parameter Name="document_title" Type="varchar" Mode="In" />
+    <Parameter Name="document_path" Type="varchar" Mode="In" />
+    <Parameter Name="createby" Type="int" Mode="In" />
+  </Function>
+  <Function Name="WEBAddGroupModules" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="intGroupMasterID" Type="int" Mode="InOut" />
+    <Parameter Name="createId" Type="varchar" Mode="In" />
+    <Parameter Name="ModuleIds" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+    <Parameter Name="MemberName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBAddSubGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="createdBy" Type="varchar" Mode="In" />
+    <Parameter Name="memberProfileId" Type="text" Mode="In" />
+    <Parameter Name="intSubGroupMasterID" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="WEBAnnouncementAddEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="annID" Type="int" Mode="InOut" />
+    <Parameter Name="annType" Type="varchar" Mode="In" />
+    <Parameter Name="announTitle" Type="varchar" Mode="In" />
+    <Parameter Name="announceDEsc" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="announcementImg" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="sendSmsFlag" Type="varchar" Mode="In" />
+    <Parameter Name="sendSmsFlagAll" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBAnnouncementDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="DelRecordID" Type="varchar" Mode="In" />
+    <Parameter Name="deletedBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBAnnouncementGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="announcementsMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBAnnouncementList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="strSearch" Type="varchar" Mode="In" />
+    <Parameter Name="strGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="activeInactive" Type="varchar" Mode="In" />
+    <Parameter Name="dtToday" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBAnnouncementList1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <Parameter Name="isAdmin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBCreateGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="GroupName" Type="varchar" Mode="In" />
+    <Parameter Name="GroupType" Type="varchar" Mode="In" />
+    <Parameter Name="GroupCategory" Type="varchar" Mode="In" />
+    <Parameter Name="GroupAddress1" Type="varchar" Mode="In" />
+    <Parameter Name="City" Type="varchar" Mode="In" />
+    <Parameter Name="State" Type="varchar" Mode="In" />
+    <Parameter Name="Country" Type="varchar" Mode="In" />
+    <Parameter Name="Pincode" Type="varchar" Mode="In" />
+    <Parameter Name="ContactNo" Type="varchar" Mode="In" />
+    <Parameter Name="GroupWebsite" Type="varchar" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+    <Parameter Name="GroupHistory" Type="varchar" Mode="In" />
+    <Parameter Name="GroupImagePath" Type="varchar" Mode="In" />
+    <Parameter Name="intGroupMasterID" Type="int" Mode="InOut" />
+    <Parameter Name="createId" Type="varchar" Mode="In" />
+    <Parameter Name="EmailId" Type="varchar" Mode="In" />
+    <Parameter Name="Other" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WebDeleteGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="profileID" Type="varchar" Mode="In" />
+    <Parameter Name="role" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBDocumentAddEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="docID" Type="varchar" Mode="InOut" />
+    <Parameter Name="documentType" Type="varchar" Mode="In" />
+    <Parameter Name="documentTitle" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="documentName" Type="varchar" Mode="In" />
+    <Parameter Name="documentExt" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBDocumentDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="DelRecordID" Type="varchar" Mode="In" />
+    <Parameter Name="deletedBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbulletinAddEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="bulletinID" Type="varchar" Mode="InOut" />
+    <Parameter Name="bulletinType" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinTitle" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinlink" Type="varchar" Mode="In" />
+    <Parameter Name="ebulletinfile" Type="varchar" Mode="In" />
+    <Parameter Name="memID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="memprofileIDs" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="sendSmsFlag" Type="varchar" Mode="In" />
+    <Parameter Name="sendSmsFlagAll" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbulletinDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="DelRecordID" Type="varchar" Mode="In" />
+    <Parameter Name="deletedBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbulletinGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="ebulletinMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbulletinList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="strSearch" Type="varchar" Mode="In" />
+    <Parameter Name="strGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="activeInactive" Type="varchar" Mode="In" />
+    <Parameter Name="dtToday" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbulletinList1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbullGrpChkList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="intebulletinMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEbullMemChkList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="intebulletinMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEventAddEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="evntTitle" Type="varchar" Mode="In" />
+    <Parameter Name="evntDesc" Type="text" Mode="In" />
+    <Parameter Name="evntDate" Type="varchar" Mode="In" />
+    <Parameter Name="notifyDate" Type="varchar" Mode="In" />
+    <Parameter Name="publishDate" Type="varchar" Mode="In" />
+    <Parameter Name="expiryDate" Type="varchar" Mode="In" />
+    <Parameter Name="eventVenue" Type="varchar" Mode="In" />
+    <Parameter Name="event_cut_off_date" Type="varchar" Mode="In" />
+    <Parameter Name="eventType" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="send_sms_flag" Type="varchar" Mode="In" />
+    <Parameter Name="send_sms_all_flag" Type="varchar" Mode="In" />
+    <Parameter Name="questionEnable" Type="int" Mode="In" />
+    <Parameter Name="membersIDs" Type="varchar" Mode="In" />
+    <Parameter Name="eventPic" Type="varchar" Mode="In" />
+    <Parameter Name="venueLat" Type="varchar" Mode="In" />
+    <Parameter Name="venueLong" Type="varchar" Mode="In" />
+    <Parameter Name="rsvpRepeatDate" Type="varchar" Mode="In" />
+    <Parameter Name="questionText" Type="varchar" Mode="In" />
+    <Parameter Name="questionType" Type="varchar" Mode="In" />
+    <Parameter Name="option1" Type="varchar" Mode="In" />
+    <Parameter Name="option2" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEventMemberChkList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBEventSubGrpChkList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGetCountryCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="CountryName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBgetCountryName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="CountryText" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGetDocumentList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="groupId" Type="varchar" Mode="In" />
+    <Parameter Name="search" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WebGetEventDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WebGetEventDetailsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="eventID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGetEventList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="int" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="filterType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGetMemberProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="MemProId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="WEBGetProfileID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="GroupId" Type="int" Mode="In" />
+    <Parameter Name="profileID" Type="int" Mode="Out" />
+  </Function>
+  <Function Name="WEBGetSubGroupDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="SubGroupId" Type="varchar" Mode="In" />
+    <Parameter Name="searchText" Type="varchar" Mode="In" />
+    <Parameter Name="LoginProfileID" Type="varchar" Mode="In" />
+    <Parameter Name="ParentSubGrpID" Type="varchar" Mode="In" />
+    <Parameter Name="subGrpCount" Type="int" Mode="InOut" />
+    <Parameter Name="Mode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="DelRecordID" Type="varchar" Mode="In" />
+    <Parameter Name="deletedBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGroupDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="GroupMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="LoginID" Type="varchar" Mode="In" />
+    <Parameter Name="UserRole" Type="varchar" Mode="In" />
+    <Parameter Name="search" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBInsertProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="mobile" Type="varchar" Mode="In" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="groupId" Type="int" Mode="In" />
+    <Parameter Name="country" Type="varchar" Mode="In" />
+    <Parameter Name="createBy" Type="int" Mode="In" />
+    <Parameter Name="profileID" Type="int" Mode="Out" />
+  </Function>
+  <Function Name="WEBLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberChkList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="announcementsMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberFamilyDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="fk_memberid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberFamilyDetAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="fk_memberid" Type="int" Mode="InOut" />
+    <Parameter Name="MemberName" Type="varchar" Mode="In" />
+    <Parameter Name="MemberRelation" Type="varchar" Mode="In" />
+    <Parameter Name="memberPhoneNo" Type="varchar" Mode="In" />
+    <Parameter Name="memberDOB" Type="varchar" Mode="In" />
+    <Parameter Name="memberDOW" Type="varchar" Mode="In" />
+    <Parameter Name="memberBloodGR" Type="varchar" Mode="In" />
+    <Parameter Name="particulars" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="strSearch" Type="varchar" Mode="In" />
+    <Parameter Name="strGroupID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberListSubgroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="strSearch" Type="varchar" Mode="In" />
+    <Parameter Name="strGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="subGrpID" Type="varchar" Mode="In" />
+    <Parameter Name="parentID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberProfileAddEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="MemProId" Type="int" Mode="InOut" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="membername" Type="varchar" Mode="In" />
+    <Parameter Name="Designation" Type="varchar" Mode="In" />
+    <Parameter Name="mobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="memberemailid" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="varchar" Mode="In" />
+    <Parameter Name="DOW" Type="varchar" Mode="In" />
+    <Parameter Name="CountryName" Type="varchar" Mode="In" />
+    <Parameter Name="SecMobNo" Type="varchar" Mode="In" />
+    <Parameter Name="AltEmailId" Type="varchar" Mode="In" />
+    <Parameter Name="ProfilePhoto" Type="varchar" Mode="In" />
+    <Parameter Name="FamilyPhoto" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+    <Parameter Name="MemberPerDetVisible" Type="int" Mode="In" />
+    <Parameter Name="MemberFamDetVisible" Type="int" Mode="In" />
+    <Parameter Name="RAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Rpincode" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_city_id" Type="varchar" Mode="In" />
+    <Parameter Name="Rphone_no" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_state_id" Type="varchar" Mode="In" />
+    <Parameter Name="BAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Bpincode" Type="varchar" Mode="In" />
+    <Parameter Name="Bfk_city_id" Type="varchar" Mode="In" />
+    <Parameter Name="Bfk_country_id" Type="varchar" Mode="In" />
+    <Parameter Name="BFaxNo" Type="varchar" Mode="In" />
+    <Parameter Name="BPhone_no" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_country_id" Type="varchar" Mode="In" />
+    <Parameter Name="BusinessName" Type="varchar" Mode="In" />
+    <Parameter Name="BussState" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBMemberProfileAddressAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="fk_memberid" Type="int" Mode="InOut" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="RAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Rpincode" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_city_id" Type="varchar" Mode="In" />
+    <Parameter Name="Rphone_no" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_state_id" Type="varchar" Mode="In" />
+    <Parameter Name="BAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Bpincode" Type="varchar" Mode="In" />
+    <Parameter Name="Bfk_city_id" Type="varchar" Mode="In" />
+    <Parameter Name="Bfk_country_id" Type="varchar" Mode="In" />
+    <Parameter Name="BFaxNo" Type="varchar" Mode="In" />
+    <Parameter Name="BPhone_no" Type="varchar" Mode="In" />
+    <Parameter Name="Rfk_country_id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBProfileDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="ProfileID" Type="varchar" Mode="In" />
+    <Parameter Name="deletedBy" Type="varchar" Mode="In" />
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="WEBPWDDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="grpId" Type="varchar" Mode="In" />
+    <Parameter Name="mobileNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBSubGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="DelRecordID" Type="varchar" Mode="In" />
+    <Parameter Name="deletedBy" Type="varchar" Mode="In" />
+    <Parameter Name="ChildSubGrpIDs" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEBSubGrpChkList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="announcementsMasterID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WEB_ImportData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase">
+    <Parameter Name="MemProfileid" Type="varchar" Mode="InOut" />
+    <Parameter Name="memberName" Type="varchar" Mode="In" />
+    <Parameter Name="designation" Type="varchar" Mode="In" />
+    <Parameter Name="country" Type="varchar" Mode="In" />
+    <Parameter Name="mobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="emailID" Type="varchar" Mode="In" />
+    <Parameter Name="r_Addr" Type="text" Mode="In" />
+    <Parameter Name="r_Pin" Type="varchar" Mode="In" />
+    <Parameter Name="r_phNo" Type="varchar" Mode="In" />
+    <Parameter Name="r_city" Type="varchar" Mode="In" />
+    <Parameter Name="r_state" Type="varchar" Mode="In" />
+    <Parameter Name="r_country" Type="varchar" Mode="In" />
+    <Parameter Name="buss_name" Type="varchar" Mode="In" />
+    <Parameter Name="b_addr" Type="text" Mode="In" />
+    <Parameter Name="b_Email" Type="varchar" Mode="In" />
+    <Parameter Name="b_pin" Type="varchar" Mode="In" />
+    <Parameter Name="b_city" Type="varchar" Mode="In" />
+    <Parameter Name="b_state" Type="varchar" Mode="In" />
+    <Parameter Name="b_country" Type="varchar" Mode="In" />
+    <Parameter Name="b_fax" Type="varchar" Mode="In" />
+    <Parameter Name="birthDate" Type="varchar" Mode="In" />
+    <Parameter Name="DOW" Type="varchar" Mode="In" />
+    <Parameter Name="grpID" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="xmlinsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="touchbase" />
+</Schema>

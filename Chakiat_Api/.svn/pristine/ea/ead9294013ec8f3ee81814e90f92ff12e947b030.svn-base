@@ -1,0 +1,1307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="row_productionModelStoreContainer" CdmEntityContainer="row_productionEntities">
+    <EntitySetMapping Name="announcement_repeatdate">
+      <EntityTypeMapping TypeName="row_productionModel.announcement_repeatdate">
+        <MappingFragment StoreEntitySet="announcement_repeatdate">
+          <ScalarProperty Name="pk_ann_repeatdate_id" ColumnName="pk_ann_repeatdate_id" />
+          <ScalarProperty Name="fk_ann_master_id" ColumnName="fk_ann_master_id" />
+          <ScalarProperty Name="Repeat_date" ColumnName="Repeat_date" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="announcements_details">
+      <EntityTypeMapping TypeName="row_productionModel.announcements_details">
+        <MappingFragment StoreEntitySet="announcements_details">
+          <ScalarProperty Name="pk_announcements_details_id" ColumnName="pk_announcements_details_id" />
+          <ScalarProperty Name="fk_announcements_master_id" ColumnName="fk_announcements_master_id" />
+          <ScalarProperty Name="fk_member_master_profile_id" ColumnName="fk_member_master_profile_id" />
+          <ScalarProperty Name="fk_sub_group_id" ColumnName="fk_sub_group_id" />
+          <ScalarProperty Name="read_flag" ColumnName="read_flag" />
+          <ScalarProperty Name="ann_not_sent" ColumnName="ann_not_sent" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="announcements_master">
+      <EntityTypeMapping TypeName="row_productionModel.announcements_master">
+        <MappingFragment StoreEntitySet="announcements_master">
+          <ScalarProperty Name="pk_announcements_master_id" ColumnName="pk_announcements_master_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_module_id" ColumnName="fk_module_id" />
+          <ScalarProperty Name="announcements_desc" ColumnName="announcements_desc" />
+          <ScalarProperty Name="announcements_title" ColumnName="announcements_title" />
+          <ScalarProperty Name="announcement_img" ColumnName="announcement_img" />
+          <ScalarProperty Name="notification_date" ColumnName="notification_date" />
+          <ScalarProperty Name="notification_time" ColumnName="notification_time" />
+          <ScalarProperty Name="publish_date" ColumnName="publish_date" />
+          <ScalarProperty Name="publish_time" ColumnName="publish_time" />
+          <ScalarProperty Name="fk_event_master_id" ColumnName="fk_event_master_id" />
+          <ScalarProperty Name="notification_sent" ColumnName="notification_sent" />
+          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+          <ScalarProperty Name="announcement_type" ColumnName="announcement_type" />
+          <ScalarProperty Name="send_sms_flag" ColumnName="send_sms_flag" />
+          <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+          <ScalarProperty Name="send_sms_all_flag" ColumnName="send_sms_all_flag" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attentance_master">
+      <EntityTypeMapping TypeName="row_productionModel.attentance_master">
+        <MappingFragment StoreEntitySet="attentance_master">
+          <ScalarProperty Name="attendance_id" ColumnName="attendance_id" />
+          <ScalarProperty Name="fk_group_id" ColumnName="fk_group_id" />
+          <ScalarProperty Name="fk_module_id" ColumnName="fk_module_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="unique_id_no" ColumnName="unique_id_no" />
+          <ScalarProperty Name="attendance_percentage" ColumnName="attendance_percentage" />
+          <ScalarProperty Name="attendance_month" ColumnName="attendance_month" />
+          <ScalarProperty Name="attendance_year" ColumnName="attendance_year" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="committee_master">
+      <EntityTypeMapping TypeName="row_productionModel.committee_master">
+        <MappingFragment StoreEntitySet="committee_master">
+          <ScalarProperty Name="committee_master_id" ColumnName="committee_master_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="member_designation" ColumnName="member_designation" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="club_name" ColumnName="club_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="country_master">
+      <EntityTypeMapping TypeName="row_productionModel.country_master">
+        <MappingFragment StoreEntitySet="country_master">
+          <ScalarProperty Name="country_master_id" ColumnName="country_master_id" />
+          <ScalarProperty Name="country_master_name" ColumnName="country_master_name" />
+          <ScalarProperty Name="country_code" ColumnName="country_code" />
+          <ScalarProperty Name="GMT_Opt" ColumnName="GMT_Opt" />
+          <ScalarProperty Name="GMT_Time" ColumnName="GMT_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deletedimages">
+      <EntityTypeMapping TypeName="row_productionModel.deletedimage">
+        <MappingFragment StoreEntitySet="deletedimages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="FileDelete" ColumnName="FileDelete" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="deletedOn" ColumnName="deletedOn" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="district_master">
+      <EntityTypeMapping TypeName="row_productionModel.district_master">
+        <MappingFragment StoreEntitySet="district_master">
+          <ScalarProperty Name="pk_district_master_id" ColumnName="pk_district_master_id" />
+          <ScalarProperty Name="grand_total" ColumnName="grand_total" />
+          <ScalarProperty Name="district_number" ColumnName="district_number" />
+          <ScalarProperty Name="zone" ColumnName="zone" />
+          <ScalarProperty Name="dist_amt_balance" ColumnName="dist_amt_balance" />
+          <ScalarProperty Name="dist_last_pack_purchase_amt" ColumnName="dist_last_pack_purchase_amt" />
+          <ScalarProperty Name="BirthText" ColumnName="BirthText" />
+          <ScalarProperty Name="AnnText" ColumnName="AnnText" />
+          <ScalarProperty Name="renewal_sub_amount" ColumnName="renewal_sub_amount" />
+          <ScalarProperty Name="from_date" ColumnName="from_date" />
+          <ScalarProperty Name="to_date" ColumnName="to_date" />
+          <ScalarProperty Name="Import_flag_10" ColumnName="Import_flag_10" />
+          <ScalarProperty Name="SMS_Pack_Update_Date" ColumnName="SMS_Pack_Update_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="document_details">
+      <EntityTypeMapping TypeName="row_productionModel.document_details">
+        <MappingFragment StoreEntitySet="document_details">
+          <ScalarProperty Name="pk_document_details_id" ColumnName="pk_document_details_id" />
+          <ScalarProperty Name="fk_document_id" ColumnName="fk_document_id" />
+          <ScalarProperty Name="fk_member_master_profile_id" ColumnName="fk_member_master_profile_id" />
+          <ScalarProperty Name="fk_sub_group_id" ColumnName="fk_sub_group_id" />
+          <ScalarProperty Name="read_flag" ColumnName="read_flag" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="document_safe">
+      <EntityTypeMapping TypeName="row_productionModel.document_safe">
+        <MappingFragment StoreEntitySet="document_safe">
+          <ScalarProperty Name="pk_document_id" ColumnName="pk_document_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="document_access_type" ColumnName="document_access_type" />
+          <ScalarProperty Name="document_title" ColumnName="document_title" />
+          <ScalarProperty Name="document_path" ColumnName="document_path" />
+          <ScalarProperty Name="document_type" ColumnName="document_type" />
+          <ScalarProperty Name="publish_date" ColumnName="publish_date" />
+          <ScalarProperty Name="document_ext" ColumnName="document_ext" />
+          <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="modify_by" ColumnName="modify_by" />
+          <ScalarProperty Name="modify_on" ColumnName="modify_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_details">
+      <EntityTypeMapping TypeName="row_productionModel.event_details">
+        <MappingFragment StoreEntitySet="event_details">
+          <ScalarProperty Name="pk_event_detail_id" ColumnName="pk_event_detail_id" />
+          <ScalarProperty Name="fk_event_master_id" ColumnName="fk_event_master_id" />
+          <ScalarProperty Name="fk_SubGroupMaster_Id" ColumnName="fk_SubGroupMaster_Id" />
+          <ScalarProperty Name="fk_member_master_id" ColumnName="fk_member_master_id" />
+          <ScalarProperty Name="event_child_flag" ColumnName="event_child_flag" />
+          <ScalarProperty Name="event_child_people" ColumnName="event_child_people" />
+          <ScalarProperty Name="event_response_date" ColumnName="event_response_date" />
+          <ScalarProperty Name="event_read_flag" ColumnName="event_read_flag" />
+          <ScalarProperty Name="event_notification_sent" ColumnName="event_notification_sent" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_details_member_response">
+      <EntityTypeMapping TypeName="row_productionModel.event_details_member_response">
+        <MappingFragment StoreEntitySet="event_details_member_response">
+          <ScalarProperty Name="PK_memberResponse_Id" ColumnName="PK_memberResponse_Id" />
+          <ScalarProperty Name="Fk_Event_Details_Id" ColumnName="Fk_Event_Details_Id" />
+          <ScalarProperty Name="Fk_Event_Question_ID" ColumnName="Fk_Event_Question_ID" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="ResponseDate" ColumnName="ResponseDate" />
+          <ScalarProperty Name="fk_event_master_id" ColumnName="fk_event_master_id" />
+          <ScalarProperty Name="fk_member_profile_id" ColumnName="fk_member_profile_id" />
+          <ScalarProperty Name="member_RSVP_Response" ColumnName="member_RSVP_Response" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_master">
+      <EntityTypeMapping TypeName="row_productionModel.event_master">
+        <MappingFragment StoreEntitySet="event_master">
+          <ScalarProperty Name="pk_event_master_id" ColumnName="pk_event_master_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_subgroup_master_id" ColumnName="fk_subgroup_master_id" />
+          <ScalarProperty Name="event_title" ColumnName="event_title" />
+          <ScalarProperty Name="event_desc" ColumnName="event_desc" />
+          <ScalarProperty Name="event_img" ColumnName="event_img" />
+          <ScalarProperty Name="event_date" ColumnName="event_date" />
+          <ScalarProperty Name="event_time" ColumnName="event_time" />
+          <ScalarProperty Name="event_venue" ColumnName="event_venue" />
+          <ScalarProperty Name="venue_lat" ColumnName="venue_lat" />
+          <ScalarProperty Name="venue_long" ColumnName="venue_long" />
+          <ScalarProperty Name="publish_Date" ColumnName="publish_Date" />
+          <ScalarProperty Name="publish_Time" ColumnName="publish_Time" />
+          <ScalarProperty Name="expiry_Date" ColumnName="expiry_Date" />
+          <ScalarProperty Name="expiry_Time" ColumnName="expiry_Time" />
+          <ScalarProperty Name="event_cut_off_date" ColumnName="event_cut_off_date" />
+          <ScalarProperty Name="notification_start_date" ColumnName="notification_start_date" />
+          <ScalarProperty Name="notification_start_time" ColumnName="notification_start_time" />
+          <ScalarProperty Name="event_enable" ColumnName="event_enable" />
+          <ScalarProperty Name="questionEnable" ColumnName="questionEnable" />
+          <ScalarProperty Name="event_type" ColumnName="event_type" />
+          <ScalarProperty Name="rsvp_enable" ColumnName="rsvp_enable" />
+          <ScalarProperty Name="notification_sent" ColumnName="notification_sent" />
+          <ScalarProperty Name="send_sms_flag" ColumnName="send_sms_flag" />
+          <ScalarProperty Name="send_sms_all_flag" ColumnName="send_sms_all_flag" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_question_options">
+      <EntityTypeMapping TypeName="row_productionModel.event_question_options">
+        <MappingFragment StoreEntitySet="event_question_options">
+          <ScalarProperty Name="pk_optionID" ColumnName="pk_optionID" />
+          <ScalarProperty Name="fk_event_questionID" ColumnName="fk_event_questionID" />
+          <ScalarProperty Name="optionText" ColumnName="optionText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_questionnaire_master">
+      <EntityTypeMapping TypeName="row_productionModel.event_questionnaire_master">
+        <MappingFragment StoreEntitySet="event_questionnaire_master">
+          <ScalarProperty Name="pk_event_questionID" ColumnName="pk_event_questionID" />
+          <ScalarProperty Name="fk_event_master_ID" ColumnName="fk_event_master_ID" />
+          <ScalarProperty Name="question_type" ColumnName="question_type" />
+          <ScalarProperty Name="question_text" ColumnName="question_text" />
+          <ScalarProperty Name="option1" ColumnName="option1" />
+          <ScalarProperty Name="option2" ColumnName="option2" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+          <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_repeatdate">
+      <EntityTypeMapping TypeName="row_productionModel.event_repeatdate">
+        <MappingFragment StoreEntitySet="event_repeatdate">
+          <ScalarProperty Name="pk_event_repeatdate_id" ColumnName="pk_event_repeatdate_id" />
+          <ScalarProperty Name="fk_event_master_id" ColumnName="fk_event_master_id" />
+          <ScalarProperty Name="Repeat_date" ColumnName="Repeat_date" />
+          <ScalarProperty Name="repeat_time" ColumnName="repeat_time" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="external_link_master">
+      <EntityTypeMapping TypeName="row_productionModel.external_link_master">
+        <MappingFragment StoreEntitySet="external_link_master">
+          <ScalarProperty Name="pk_linkId" ColumnName="pk_linkId" />
+          <ScalarProperty Name="fk_group_master_Id" ColumnName="fk_group_master_Id" />
+          <ScalarProperty Name="fk_module_master_id" ColumnName="fk_module_master_id" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Creation_date" ColumnName="Creation_date" />
+          <ScalarProperty Name="Modification_date" ColumnName="Modification_date" />
+          <ScalarProperty Name="LableText" ColumnName="LableText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gallery_image_details">
+      <EntityTypeMapping TypeName="row_productionModel.gallery_image_details">
+        <MappingFragment StoreEntitySet="gallery_image_details">
+          <ScalarProperty Name="pk_gallery_image_details_id" ColumnName="pk_gallery_image_details_id" />
+          <ScalarProperty Name="fk_gallery_id" ColumnName="fk_gallery_id" />
+          <ScalarProperty Name="image_name" ColumnName="image_name" />
+          <ScalarProperty Name="image_description" ColumnName="image_description" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gallery_master">
+      <EntityTypeMapping TypeName="row_productionModel.gallery_master">
+        <MappingFragment StoreEntitySet="gallery_master">
+          <ScalarProperty Name="pk_gallery_id" ColumnName="pk_gallery_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_module_master_id" ColumnName="fk_module_master_id" />
+          <ScalarProperty Name="album_title" ColumnName="album_title" />
+          <ScalarProperty Name="album_desc" ColumnName="album_desc" />
+          <ScalarProperty Name="album_image" ColumnName="album_image" />
+          <ScalarProperty Name="album_type" ColumnName="album_type" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gallery_member_details">
+      <EntityTypeMapping TypeName="row_productionModel.gallery_member_details">
+        <MappingFragment StoreEntitySet="gallery_member_details">
+          <ScalarProperty Name="pk_gallery_member_details_id" ColumnName="pk_gallery_member_details_id" />
+          <ScalarProperty Name="fk_gallery_id" ColumnName="fk_gallery_id" />
+          <ScalarProperty Name="fk_member_master_profile_id" ColumnName="fk_member_master_profile_id" />
+          <ScalarProperty Name="fk_sub_group_id" ColumnName="fk_sub_group_id" />
+          <ScalarProperty Name="read_flag" ColumnName="read_flag" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_admin_members">
+      <EntityTypeMapping TypeName="row_productionModel.group_admin_members">
+        <MappingFragment StoreEntitySet="group_admin_members">
+          <ScalarProperty Name="pk_group_admin_id" ColumnName="pk_group_admin_id" />
+          <ScalarProperty Name="fk_main_member_master_id" ColumnName="fk_main_member_master_id" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="user_Role" ColumnName="user_Role" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="dg_role" ColumnName="dg_role" />
+          <ScalarProperty Name="fk_country_master_id" ColumnName="fk_country_master_id" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_advance_filter">
+      <EntityTypeMapping TypeName="row_productionModel.group_advance_filter">
+        <MappingFragment StoreEntitySet="group_advance_filter">
+          <ScalarProperty Name="pk_filterID" ColumnName="pk_filterID" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_field_ID" ColumnName="fk_field_ID" />
+          <ScalarProperty Name="DBColumnName" ColumnName="DBColumnName" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Col_Type" ColumnName="Col_Type" />
+          <ScalarProperty Name="fieldType" ColumnName="fieldType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_category_master">
+      <EntityTypeMapping TypeName="row_productionModel.group_category_master">
+        <MappingFragment StoreEntitySet="group_category_master">
+          <ScalarProperty Name="group_category_id" ColumnName="group_category_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_dynamic_fields">
+      <EntityTypeMapping TypeName="row_productionModel.group_dynamic_fields">
+        <MappingFragment StoreEntitySet="group_dynamic_fields">
+          <ScalarProperty Name="pk_fieldID" ColumnName="pk_fieldID" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="Field_Title" ColumnName="Field_Title" />
+          <ScalarProperty Name="Field_Type" ColumnName="Field_Type" />
+          <ScalarProperty Name="Field_category" ColumnName="Field_category" />
+          <ScalarProperty Name="IsEditableByMember" ColumnName="IsEditableByMember" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_on" ColumnName="Created_on" />
+          <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+          <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_info">
+      <EntityTypeMapping TypeName="row_productionModel.group_info">
+        <MappingFragment StoreEntitySet="group_info">
+          <ScalarProperty Name="pk_grpinfo_id" ColumnName="pk_grpinfo_id" />
+          <ScalarProperty Name="fk_group_id" ColumnName="fk_group_id" />
+          <ScalarProperty Name="fk_module_id" ColumnName="fk_module_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_master">
+      <EntityTypeMapping TypeName="row_productionModel.group_master">
+        <MappingFragment StoreEntitySet="group_master">
+          <ScalarProperty Name="pk_group_master_id" ColumnName="pk_group_master_id" />
+          <ScalarProperty Name="fk_district_master_id" ColumnName="fk_district_master_id" />
+          <ScalarProperty Name="district_number" ColumnName="district_number" />
+          <ScalarProperty Name="group_name" ColumnName="group_name" />
+          <ScalarProperty Name="group_type" ColumnName="group_type" />
+          <ScalarProperty Name="group_category" ColumnName="group_category" />
+          <ScalarProperty Name="club_id" ColumnName="club_id" />
+          <ScalarProperty Name="club_Key" ColumnName="club_Key" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="group_email" ColumnName="group_email" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="fk_state_master_id" ColumnName="fk_state_master_id" />
+          <ScalarProperty Name="fk_city_master_id" ColumnName="fk_city_master_id" />
+          <ScalarProperty Name="fk_country_master_id" ColumnName="fk_country_master_id" />
+          <ScalarProperty Name="contact_no" ColumnName="contact_no" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="club_history" ColumnName="club_history" />
+          <ScalarProperty Name="memberCount" ColumnName="memberCount" />
+          <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+          <ScalarProperty Name="toDate" ColumnName="toDate" />
+          <ScalarProperty Name="club_image" ColumnName="club_image" />
+          <ScalarProperty Name="club_website" ColumnName="club_website" />
+          <ScalarProperty Name="bdayann_smsreq" ColumnName="bdayann_smsreq" />
+          <ScalarProperty Name="club_rules" ColumnName="club_rules" />
+          <ScalarProperty Name="club_bylaws" ColumnName="club_bylaws" />
+          <ScalarProperty Name="SMSCount" ColumnName="SMSCount" />
+          <ScalarProperty Name="establish_date" ColumnName="establish_date" />
+          <ScalarProperty Name="club_amt_balance" ColumnName="club_amt_balance" />
+          <ScalarProperty Name="club_last_pack_purchase_amt" ColumnName="club_last_pack_purchase_amt" />
+          <ScalarProperty Name="club_meeting_from_time" ColumnName="club_meeting_from_time" />
+          <ScalarProperty Name="club_meeting_to_time" ColumnName="club_meeting_to_time" />
+          <ScalarProperty Name="club_meeting_day" ColumnName="club_meeting_day" />
+          <ScalarProperty Name="meeting_notification" ColumnName="meeting_notification" />
+          <ScalarProperty Name="Last_SMS_sent_on" ColumnName="Last_SMS_sent_on" />
+          <ScalarProperty Name="SMS_Pack_Update_Date" ColumnName="SMS_Pack_Update_Date" />
+          <ScalarProperty Name="spouse_login" ColumnName="spouse_login" />
+          <ScalarProperty Name="club_latitude" ColumnName="club_latitude" />
+          <ScalarProperty Name="club_longitude" ColumnName="club_longitude" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_member_fields">
+      <EntityTypeMapping TypeName="row_productionModel.group_member_fields">
+        <MappingFragment StoreEntitySet="group_member_fields">
+          <ScalarProperty Name="pk_group_member_fields_id" ColumnName="pk_group_member_fields_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="order_by" ColumnName="order_by" />
+          <ScalarProperty Name="sub_module_name" ColumnName="sub_module_name" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_memberfield_lookup">
+      <EntityTypeMapping TypeName="row_productionModel.group_memberfield_lookup">
+        <MappingFragment StoreEntitySet="group_memberfield_lookup">
+          <ScalarProperty Name="pk_lookupId" ColumnName="pk_lookupId" />
+          <ScalarProperty Name="Group_Id" ColumnName="Group_Id" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="DBColumnName" ColumnName="DBColumnName" />
+          <ScalarProperty Name="ColType" ColumnName="ColType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_modules">
+      <EntityTypeMapping TypeName="row_productionModel.group_modules">
+        <MappingFragment StoreEntitySet="group_modules">
+          <ScalarProperty Name="pk_group_modules_id" ColumnName="pk_group_modules_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_module_master_id" ColumnName="fk_module_master_id" />
+          <ScalarProperty Name="module_newname" ColumnName="module_newname" />
+          <ScalarProperty Name="module_oldname" ColumnName="module_oldname" />
+          <ScalarProperty Name="module_image" ColumnName="module_image" />
+          <ScalarProperty Name="module_priority" ColumnName="module_priority" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="image_table">
+      <EntityTypeMapping TypeName="row_productionModel.image_table">
+        <MappingFragment StoreEntitySet="image_table">
+          <ScalarProperty Name="pk_image_id" ColumnName="pk_image_id" />
+          <ScalarProperty Name="Image_name" ColumnName="Image_name" />
+          <ScalarProperty Name="Module_name" ColumnName="Module_name" />
+          <ScalarProperty Name="File_type" ColumnName="File_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="improvement_details">
+      <EntityTypeMapping TypeName="row_productionModel.improvement_details">
+        <MappingFragment StoreEntitySet="improvement_details">
+          <ScalarProperty Name="pk_improvement_details_id" ColumnName="pk_improvement_details_id" />
+          <ScalarProperty Name="fk_improvement_master_id" ColumnName="fk_improvement_master_id" />
+          <ScalarProperty Name="fk_member_master_profile_id" ColumnName="fk_member_master_profile_id" />
+          <ScalarProperty Name="fk_sub_group_id" ColumnName="fk_sub_group_id" />
+          <ScalarProperty Name="read_flag" ColumnName="read_flag" />
+          <ScalarProperty Name="ann_not_sent" ColumnName="ann_not_sent" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="improvement_master">
+      <EntityTypeMapping TypeName="row_productionModel.improvement_master">
+        <MappingFragment StoreEntitySet="improvement_master">
+          <ScalarProperty Name="pk_improvement_master_id" ColumnName="pk_improvement_master_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="improvement_desc" ColumnName="improvement_desc" />
+          <ScalarProperty Name="improvement_title" ColumnName="improvement_title" />
+          <ScalarProperty Name="improvement_img" ColumnName="improvement_img" />
+          <ScalarProperty Name="notification_date" ColumnName="notification_date" />
+          <ScalarProperty Name="notification_time" ColumnName="notification_time" />
+          <ScalarProperty Name="publish_date" ColumnName="publish_date" />
+          <ScalarProperty Name="publish_time" ColumnName="publish_time" />
+          <ScalarProperty Name="fk_event_master_id" ColumnName="fk_event_master_id" />
+          <ScalarProperty Name="notification_sent" ColumnName="notification_sent" />
+          <ScalarProperty Name="improvement_type" ColumnName="improvement_type" />
+          <ScalarProperty Name="send_sms_flag" ColumnName="send_sms_flag" />
+          <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+          <ScalarProperty Name="send_sms_all_flag" ColumnName="send_sms_all_flag" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="language_label">
+      <EntityTypeMapping TypeName="row_productionModel.language_label">
+        <MappingFragment StoreEntitySet="language_label">
+          <ScalarProperty Name="pk_language_label_id" ColumnName="pk_language_label_id" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="english" ColumnName="english" />
+          <ScalarProperty Name="french" ColumnName="french" />
+          <ScalarProperty Name="hindi" ColumnName="hindi" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="language_master">
+      <EntityTypeMapping TypeName="row_productionModel.language_master">
+        <MappingFragment StoreEntitySet="language_master">
+          <ScalarProperty Name="pk_language_master_id" ColumnName="pk_language_master_id" />
+          <ScalarProperty Name="language_name" ColumnName="language_name" />
+          <ScalarProperty Name="display_name" ColumnName="display_name" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="main_member_master">
+      <EntityTypeMapping TypeName="row_productionModel.main_member_master">
+        <MappingFragment StoreEntitySet="main_member_master">
+          <ScalarProperty Name="pk_main_member_master_id" ColumnName="pk_main_member_master_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="member_mobile" ColumnName="member_mobile" />
+          <ScalarProperty Name="fk_country_id" ColumnName="fk_country_id" />
+          <ScalarProperty Name="ProfilePic_Path" ColumnName="ProfilePic_Path" />
+          <ScalarProperty Name="member_emailid" ColumnName="member_emailid" />
+          <ScalarProperty Name="IMEI_No" ColumnName="IMEI_No" />
+          <ScalarProperty Name="DeviceToken" ColumnName="DeviceToken" />
+          <ScalarProperty Name="Device_name" ColumnName="Device_name" />
+          <ScalarProperty Name="versionNo" ColumnName="versionNo" />
+          <ScalarProperty Name="registerForChat" ColumnName="registerForChat" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="Last_visited_On" ColumnName="Last_visited_On" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_address_detail">
+      <EntityTypeMapping TypeName="row_productionModel.member_address_detail">
+        <MappingFragment StoreEntitySet="member_address_detail">
+          <ScalarProperty Name="pk_address_id" ColumnName="pk_address_id" />
+          <ScalarProperty Name="fk_member_profile_id" ColumnName="fk_member_profile_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="fk_city_id" ColumnName="fk_city_id" />
+          <ScalarProperty Name="fk_state_id" ColumnName="fk_state_id" />
+          <ScalarProperty Name="fk_country_id" ColumnName="fk_country_id" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="Address_Type" ColumnName="Address_Type" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_By" ColumnName="created_By" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="row_member_master_id" ColumnName="row_member_master_id" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="mem_phone" ColumnName="mem_phone" />
+          <ScalarProperty Name="con" ColumnName="con" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_dashboard">
+      <EntityTypeMapping TypeName="row_productionModel.member_dashboard">
+        <MappingFragment StoreEntitySet="member_dashboard">
+          <ScalarProperty Name="pk_dashboard_ID" ColumnName="pk_dashboard_ID" />
+          <ScalarProperty Name="fk_member_master_profile_ID" ColumnName="fk_member_master_profile_ID" />
+          <ScalarProperty Name="fk_ModuleID" ColumnName="fk_ModuleID" />
+          <ScalarProperty Name="modification_Date" ColumnName="modification_Date" />
+          <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_family_master">
+      <EntityTypeMapping TypeName="row_productionModel.member_family_master">
+        <MappingFragment StoreEntitySet="member_family_master">
+          <ScalarProperty Name="pk_member_family_master_id" ColumnName="pk_member_family_master_id" />
+          <ScalarProperty Name="fk_main_member_master_id" ColumnName="fk_main_member_master_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="member_relationship" ColumnName="member_relationship" />
+          <ScalarProperty Name="fk_country_id" ColumnName="fk_country_id" />
+          <ScalarProperty Name="member_contact_no" ColumnName="member_contact_no" />
+          <ScalarProperty Name="member_date_of_birth" ColumnName="member_date_of_birth" />
+          <ScalarProperty Name="member_date_of_wedding" ColumnName="member_date_of_wedding" />
+          <ScalarProperty Name="member_blood_group" ColumnName="member_blood_group" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="particulars" ColumnName="particulars" />
+          <ScalarProperty Name="IMEI_No" ColumnName="IMEI_No" />
+          <ScalarProperty Name="Device_Token" ColumnName="Device_Token" />
+          <ScalarProperty Name="Device_name" ColumnName="Device_name" />
+          <ScalarProperty Name="Version_No" ColumnName="Version_No" />
+          <ScalarProperty Name="Last_visited_On" ColumnName="Last_visited_On" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="row_member_master_id" ColumnName="row_member_master_id" />
+          <ScalarProperty Name="IsRotarian" ColumnName="IsRotarian" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="mem_phone" ColumnName="mem_phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_log">
+      <EntityTypeMapping TypeName="row_productionModel.member_log">
+        <MappingFragment StoreEntitySet="member_log">
+          <ScalarProperty Name="pk_member_log_id" ColumnName="pk_member_log_id" />
+          <ScalarProperty Name="fk_member_master_profile_id" ColumnName="fk_member_master_profile_id" />
+          <ScalarProperty Name="fk_module_master_id" ColumnName="fk_module_master_id" />
+          <ScalarProperty Name="visit_date_time" ColumnName="visit_date_time" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_master_profile">
+      <EntityTypeMapping TypeName="row_productionModel.member_master_profile">
+        <MappingFragment StoreEntitySet="member_master_profile">
+          <ScalarProperty Name="pk_member_master_profile_id" ColumnName="pk_member_master_profile_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_main_member_master_id" ColumnName="fk_main_member_master_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="blood_Group" ColumnName="blood_Group" />
+          <ScalarProperty Name="member_date_of_issue" ColumnName="member_date_of_issue" />
+          <ScalarProperty Name="member_phone_no" ColumnName="member_phone_no" />
+          <ScalarProperty Name="fk_country_ID" ColumnName="fk_country_ID" />
+          <ScalarProperty Name="member_mobile_no" ColumnName="member_mobile_no" />
+          <ScalarProperty Name="secondry_mobile_no" ColumnName="secondry_mobile_no" />
+          <ScalarProperty Name="member_fax_no" ColumnName="member_fax_no" />
+          <ScalarProperty Name="group_category" ColumnName="group_category" />
+          <ScalarProperty Name="member_email_id" ColumnName="member_email_id" />
+          <ScalarProperty Name="member_date_of_birth" ColumnName="member_date_of_birth" />
+          <ScalarProperty Name="member_family_photo_path" ColumnName="member_family_photo_path" />
+          <ScalarProperty Name="member_profile_photo_path" ColumnName="member_profile_photo_path" />
+          <ScalarProperty Name="member_profile_status" ColumnName="member_profile_status" />
+          <ScalarProperty Name="member_date_of_wedding" ColumnName="member_date_of_wedding" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="member_buss_email" ColumnName="member_buss_email" />
+          <ScalarProperty Name="user_role" ColumnName="user_role" />
+          <ScalarProperty Name="app_device_token_id" ColumnName="app_device_token_id" />
+          <ScalarProperty Name="device_name" ColumnName="device_name" />
+          <ScalarProperty Name="notification_enable" ColumnName="notification_enable" />
+          <ScalarProperty Name="metataging" ColumnName="metataging" />
+          <ScalarProperty Name="IsBussDetailVisible" ColumnName="IsBussDetailVisible" />
+          <ScalarProperty Name="IsPersonalDetailVisible" ColumnName="IsPersonalDetailVisible" />
+          <ScalarProperty Name="IsFamilyDetailVisi1ble" ColumnName="IsFamilyDetailVisi1ble" />
+          <ScalarProperty Name="IsMobileVisible" ColumnName="IsMobileVisible" />
+          <ScalarProperty Name="IsEmailVisible" ColumnName="IsEmailVisible" />
+          <ScalarProperty Name="IdentificationCode" ColumnName="IdentificationCode" />
+          <ScalarProperty Name="registerForChat" ColumnName="registerForChat" />
+          <ScalarProperty Name="particulars" ColumnName="particulars" />
+          <ScalarProperty Name="member_rotary_id" ColumnName="member_rotary_id" />
+          <ScalarProperty Name="member_master_designation" ColumnName="member_master_designation" />
+          <ScalarProperty Name="dg_master_designation" ColumnName="dg_master_designation" />
+          <ScalarProperty Name="dg_role" ColumnName="dg_role" />
+          <ScalarProperty Name="isBOD" ColumnName="isBOD" />
+          <ScalarProperty Name="BODorderNumber" ColumnName="BODorderNumber" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="club_name" ColumnName="club_name" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="club_id" ColumnName="club_id" />
+          <ScalarProperty Name="row_member_master_id" ColumnName="row_member_master_id" />
+          <ScalarProperty Name="show_mobile_self_club" ColumnName="show_mobile_self_club" />
+          <ScalarProperty Name="show_mobile_other_club" ColumnName="show_mobile_other_club" />
+          <ScalarProperty Name="show_email_self_club" ColumnName="show_email_self_club" />
+          <ScalarProperty Name="show_email_other_club" ColumnName="show_email_other_club" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_profile_dynamic_fields">
+      <EntityTypeMapping TypeName="row_productionModel.member_profile_dynamic_fields">
+        <MappingFragment StoreEntitySet="member_profile_dynamic_fields">
+          <ScalarProperty Name="pk_fieldValueID" ColumnName="pk_fieldValueID" />
+          <ScalarProperty Name="fk_MemberProfileID" ColumnName="fk_MemberProfileID" />
+          <ScalarProperty Name="fk_DynamicFieldID" ColumnName="fk_DynamicFieldID" />
+          <ScalarProperty Name="fieldValue" ColumnName="fieldValue" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_profile_field_lookup">
+      <EntityTypeMapping TypeName="row_productionModel.member_profile_field_lookup">
+        <MappingFragment StoreEntitySet="member_profile_field_lookup">
+          <ScalarProperty Name="pkFieldSetId" ColumnName="pkFieldSetId" />
+          <ScalarProperty Name="fieldName" ColumnName="fieldName" />
+          <ScalarProperty Name="dbColumnName" ColumnName="dbColumnName" />
+          <ScalarProperty Name="colType" ColumnName="colType" />
+          <ScalarProperty Name="fieldType" ColumnName="fieldType" />
+          <ScalarProperty Name="mandatory" ColumnName="mandatory" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_profile_selected_fields">
+      <EntityTypeMapping TypeName="row_productionModel.member_profile_selected_fields">
+        <MappingFragment StoreEntitySet="member_profile_selected_fields">
+          <ScalarProperty Name="pk_id" ColumnName="pk_id" />
+          <ScalarProperty Name="fk_group_id" ColumnName="fk_group_id" />
+          <ScalarProperty Name="fk_fieldID" ColumnName="fk_fieldID" />
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="field_new_name" ColumnName="field_new_name" />
+          <ScalarProperty Name="db_column_name" ColumnName="db_column_name" />
+          <ScalarProperty Name="colType" ColumnName="colType" />
+          <ScalarProperty Name="field_type" ColumnName="field_type" />
+          <ScalarProperty Name="order_no" ColumnName="order_no" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="module_master">
+      <EntityTypeMapping TypeName="row_productionModel.module_master">
+        <MappingFragment StoreEntitySet="module_master">
+          <ScalarProperty Name="pk_module_master_id" ColumnName="pk_module_master_id" />
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="module_static_ref" ColumnName="module_static_ref" />
+          <ScalarProperty Name="replica_of_module" ColumnName="replica_of_module" />
+          <ScalarProperty Name="module_price_rs" ColumnName="module_price_rs" />
+          <ScalarProperty Name="module_price_usd" ColumnName="module_price_usd" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="module_info" ColumnName="module_info" />
+          <ScalarProperty Name="phase" ColumnName="phase" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newsletter_details">
+      <EntityTypeMapping TypeName="row_productionModel.newsletter_details">
+        <MappingFragment StoreEntitySet="newsletter_details">
+          <ScalarProperty Name="pk_newsletter_details_id" ColumnName="pk_newsletter_details_id" />
+          <ScalarProperty Name="fk_newsletter_master_id" ColumnName="fk_newsletter_master_id" />
+          <ScalarProperty Name="fk_member_master_id" ColumnName="fk_member_master_id" />
+          <ScalarProperty Name="fk_sub_group_id" ColumnName="fk_sub_group_id" />
+          <ScalarProperty Name="read_flag" ColumnName="read_flag" />
+          <ScalarProperty Name="Notification_sent" ColumnName="Notification_sent" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="newsletter_master">
+      <EntityTypeMapping TypeName="row_productionModel.newsletter_master">
+        <MappingFragment StoreEntitySet="newsletter_master">
+          <ScalarProperty Name="pk_newsletter_master_id" ColumnName="pk_newsletter_master_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="newsletter_title" ColumnName="newsletter_title" />
+          <ScalarProperty Name="newsletter_link" ColumnName="newsletter_link" />
+          <ScalarProperty Name="newsletter_filepath" ColumnName="newsletter_filepath" />
+          <ScalarProperty Name="publish_date" ColumnName="publish_date" />
+          <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+          <ScalarProperty Name="newsletter_type" ColumnName="newsletter_type" />
+          <ScalarProperty Name="send_SMS_Flag" ColumnName="send_SMS_Flag" />
+          <ScalarProperty Name="send_SMS_all_Flag" ColumnName="send_SMS_all_Flag" />
+          <ScalarProperty Name="newsletter_from" ColumnName="newsletter_from" />
+          <ScalarProperty Name="newsletter_date" ColumnName="newsletter_date" />
+          <ScalarProperty Name="publish_time" ColumnName="publish_time" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notification_flag">
+      <EntityTypeMapping TypeName="row_productionModel.notification_flag">
+        <MappingFragment StoreEntitySet="notification_flag">
+          <ScalarProperty Name="notification_flag_id" ColumnName="notification_flag_id" />
+          <ScalarProperty Name="app_device_token_id" ColumnName="app_device_token_id" />
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="not_desc" ColumnName="not_desc" />
+          <ScalarProperty Name="last_updated_date" ColumnName="last_updated_date" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="inc" ColumnName="inc" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_club_subscription">
+      <EntityTypeMapping TypeName="row_productionModel.order_club_subscription">
+        <MappingFragment StoreEntitySet="order_club_subscription">
+          <ScalarProperty Name="pk_ClubSubcription_id" ColumnName="pk_ClubSubcription_id" />
+          <ScalarProperty Name="txn_id" ColumnName="txn_id" />
+          <ScalarProperty Name="club_name" ColumnName="club_name" />
+          <ScalarProperty Name="address_street" ColumnName="address_street" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="club_president_firstname" ColumnName="club_president_firstname" />
+          <ScalarProperty Name="club_president_lastname" ColumnName="club_president_lastname" />
+          <ScalarProperty Name="club_president_contact_no" ColumnName="club_president_contact_no" />
+          <ScalarProperty Name="club_president_email_id" ColumnName="club_president_email_id" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Acceptance_Agreement" ColumnName="Acceptance_Agreement" />
+          <ScalarProperty Name="license_from_month" ColumnName="license_from_month" />
+          <ScalarProperty Name="license_to_month" ColumnName="license_to_month" />
+          <ScalarProperty Name="license_from_year" ColumnName="license_from_year" />
+          <ScalarProperty Name="license_to_year" ColumnName="license_to_year" />
+          <ScalarProperty Name="data_entry" ColumnName="data_entry" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="data_entry_amt" ColumnName="data_entry_amt" />
+          <ScalarProperty Name="currency1" ColumnName="currency1" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="currency2" ColumnName="currency2" />
+          <ScalarProperty Name="service_tax" ColumnName="service_tax" />
+          <ScalarProperty Name="currency3" ColumnName="currency3" />
+          <ScalarProperty Name="grand_amt" ColumnName="grand_amt" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="club_id" ColumnName="club_id" />
+          <ScalarProperty Name="district_id" ColumnName="district_id" />
+          <ScalarProperty Name="member_count" ColumnName="member_count" />
+          <ScalarProperty Name="club_count" ColumnName="club_count" />
+          <ScalarProperty Name="type_of_deal" ColumnName="type_of_deal" />
+          <ScalarProperty Name="otp_received" ColumnName="otp_received" />
+          <ScalarProperty Name="dollar_rate" ColumnName="dollar_rate" />
+          <ScalarProperty Name="order_number" ColumnName="order_number" />
+          <ScalarProperty Name="pay_plan" ColumnName="pay_plan" />
+          <ScalarProperty Name="interest_rate" ColumnName="interest_rate" />
+          <ScalarProperty Name="setUpCharge" ColumnName="setUpCharge" />
+          <ScalarProperty Name="other_contact" ColumnName="other_contact" />
+          <ScalarProperty Name="other_designation" ColumnName="other_designation" />
+          <ScalarProperty Name="other_mobile" ColumnName="other_mobile" />
+          <ScalarProperty Name="pricePerMem" ColumnName="pricePerMem" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_master">
+      <EntityTypeMapping TypeName="row_productionModel.order_master">
+        <MappingFragment StoreEntitySet="order_master">
+          <ScalarProperty Name="order_master_id" ColumnName="order_master_id" />
+          <ScalarProperty Name="club_name" ColumnName="club_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="club_president_name" ColumnName="club_president_name" />
+          <ScalarProperty Name="club_president_contact_no" ColumnName="club_president_contact_no" />
+          <ScalarProperty Name="club_president_email_id" ColumnName="club_president_email_id" />
+          <ScalarProperty Name="club_secretary_name" ColumnName="club_secretary_name" />
+          <ScalarProperty Name="club_secretary_contact_no" ColumnName="club_secretary_contact_no" />
+          <ScalarProperty Name="club_secretary_email_id" ColumnName="club_secretary_email_id" />
+          <ScalarProperty Name="license_for_year" ColumnName="license_for_year" />
+          <ScalarProperty Name="data_entry" ColumnName="data_entry" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="past_presidents">
+      <EntityTypeMapping TypeName="row_productionModel.past_presidents">
+        <MappingFragment StoreEntitySet="past_presidents">
+          <ScalarProperty Name="pk_past_president_id" ColumnName="pk_past_president_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="member_designation" ColumnName="member_designation" />
+          <ScalarProperty Name="designation_year" ColumnName="designation_year" />
+          <ScalarProperty Name="profile_photo" ColumnName="profile_photo" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payment_info">
+      <EntityTypeMapping TypeName="row_productionModel.payment_info">
+        <MappingFragment StoreEntitySet="payment_info">
+          <ScalarProperty Name="txn_Id" ColumnName="txn_Id" />
+          <ScalarProperty Name="txn_ref" ColumnName="txn_ref" />
+          <ScalarProperty Name="txn_status" ColumnName="txn_status" />
+          <ScalarProperty Name="txn_message" ColumnName="txn_message" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="mobile_number" ColumnName="mobile_number" />
+          <ScalarProperty Name="payment_mode" ColumnName="payment_mode" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="club_name" ColumnName="club_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payment_master">
+      <EntityTypeMapping TypeName="row_productionModel.payment_master">
+        <MappingFragment StoreEntitySet="payment_master">
+          <ScalarProperty Name="txn_id" ColumnName="txn_id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="contact_no" ColumnName="contact_no" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="actualAmount" ColumnName="actualAmount" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="service_tax" ColumnName="service_tax" />
+          <ScalarProperty Name="grand_amt" ColumnName="grand_amt" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="dollar_rate" ColumnName="dollar_rate" />
+          <ScalarProperty Name="payment_link" ColumnName="payment_link" />
+          <ScalarProperty Name="org_name" ColumnName="org_name" />
+          <ScalarProperty Name="payment_for" ColumnName="payment_for" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rotary_library">
+      <EntityTypeMapping TypeName="row_productionModel.rotary_library">
+        <MappingFragment StoreEntitySet="rotary_library">
+          <ScalarProperty Name="pk_roray_library_id" ColumnName="pk_roray_library_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rpt_project_report">
+      <EntityTypeMapping TypeName="row_productionModel.rpt_project_report">
+        <MappingFragment StoreEntitySet="rpt_project_report">
+          <ScalarProperty Name="Project_Report_Id" ColumnName="Project_Report_Id" />
+          <ScalarProperty Name="Project_Master_Id" ColumnName="Project_Master_Id" />
+          <ScalarProperty Name="Executed_On" ColumnName="Executed_On" />
+          <ScalarProperty Name="Area_Focus" ColumnName="Area_Focus" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="No_Benifi" ColumnName="No_Benifi" />
+          <ScalarProperty Name="No_Partici" ColumnName="No_Partici" />
+          <ScalarProperty Name="District_officials" ColumnName="District_officials" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="Actual_Month" ColumnName="Actual_Month" />
+          <ScalarProperty Name="ChapterMasterID" ColumnName="ChapterMasterID" />
+          <ScalarProperty Name="NoOfMemberPresent" ColumnName="NoOfMemberPresent" />
+          <ScalarProperty Name="Avenuesofservice" ColumnName="Avenuesofservice" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rpt_report_detail">
+      <EntityTypeMapping TypeName="row_productionModel.rpt_report_detail">
+        <MappingFragment StoreEntitySet="rpt_report_detail">
+          <ScalarProperty Name="Report_Id" ColumnName="Report_Id" />
+          <ScalarProperty Name="Chapter_Master_Id" ColumnName="Chapter_Master_Id" />
+          <ScalarProperty Name="Actual_Meeting_Dt" ColumnName="Actual_Meeting_Dt" />
+          <ScalarProperty Name="Meeting_Type" ColumnName="Meeting_Type" />
+          <ScalarProperty Name="Speaker" ColumnName="Speaker" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Total_Mem" ColumnName="Total_Mem" />
+          <ScalarProperty Name="Attend_Mem" ColumnName="Attend_Mem" />
+          <ScalarProperty Name="Per_Mem" ColumnName="Per_Mem" />
+          <ScalarProperty Name="Actual_Month" ColumnName="Actual_Month" />
+          <ScalarProperty Name="Expt_Meeting_Dt" ColumnName="Expt_Meeting_Dt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rpt_tblclubtrf">
+      <EntityTypeMapping TypeName="row_productionModel.rpt_tblclubtrf">
+        <MappingFragment StoreEntitySet="rpt_tblclubtrf">
+          <ScalarProperty Name="TRFID" ColumnName="TRFID" />
+          <ScalarProperty Name="ChapterMasterID" ColumnName="ChapterMasterID" />
+          <ScalarProperty Name="ContributorName" ColumnName="ContributorName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ActMonth" ColumnName="ActMonth" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service_directory">
+      <EntityTypeMapping TypeName="row_productionModel.service_directory">
+        <MappingFragment StoreEntitySet="service_directory">
+          <ScalarProperty Name="pk_service_id" ColumnName="pk_service_id" />
+          <ScalarProperty Name="fk_group_id" ColumnName="fk_group_id" />
+          <ScalarProperty Name="fk_module_id" ColumnName="fk_module_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="country_code1" ColumnName="country_code1" />
+          <ScalarProperty Name="mobile_no1" ColumnName="mobile_no1" />
+          <ScalarProperty Name="country_code2" ColumnName="country_code2" />
+          <ScalarProperty Name="mobile_no2" ColumnName="mobile_no2" />
+          <ScalarProperty Name="pax_no" ColumnName="pax_no" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="adress_country" ColumnName="adress_country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="settings_master">
+      <EntityTypeMapping TypeName="row_productionModel.settings_master">
+        <MappingFragment StoreEntitySet="settings_master">
+          <ScalarProperty Name="pk_setting_id" ColumnName="pk_setting_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="fk_module_master_id" ColumnName="fk_module_master_id" />
+          <ScalarProperty Name="fk_member_profile_id" ColumnName="fk_member_profile_id" />
+          <ScalarProperty Name="notification_enable" ColumnName="notification_enable" />
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="single_field_master">
+      <EntityTypeMapping TypeName="row_productionModel.single_field_master">
+        <MappingFragment StoreEntitySet="single_field_master">
+          <ScalarProperty Name="pk_single_field_master_id" ColumnName="pk_single_field_master_id" />
+          <ScalarProperty Name="single_field_type" ColumnName="single_field_type" />
+          <ScalarProperty Name="english" ColumnName="english" />
+          <ScalarProperty Name="french" ColumnName="french" />
+          <ScalarProperty Name="hindi" ColumnName="hindi" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subgroup_details">
+      <EntityTypeMapping TypeName="row_productionModel.subgroup_details">
+        <MappingFragment StoreEntitySet="subgroup_details">
+          <ScalarProperty Name="pk_subgroup_details_id" ColumnName="pk_subgroup_details_id" />
+          <ScalarProperty Name="fk_subgroup_id" ColumnName="fk_subgroup_id" />
+          <ScalarProperty Name="fk_member_master_profile_id" ColumnName="fk_member_master_profile_id" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subgroup_master">
+      <EntityTypeMapping TypeName="row_productionModel.subgroup_master">
+        <MappingFragment StoreEntitySet="subgroup_master">
+          <ScalarProperty Name="pk_subgroup_id" ColumnName="pk_subgroup_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="subgroup_title" ColumnName="subgroup_title" />
+          <ScalarProperty Name="subgrp_type" ColumnName="subgrp_type" />
+          <ScalarProperty Name="Desc" ColumnName="Desc" />
+          <ScalarProperty Name="subgroup_img" ColumnName="subgroup_img" />
+          <ScalarProperty Name="fk_subgrp_ParentID" ColumnName="fk_subgrp_ParentID" />
+          <ScalarProperty Name="fk_Admin_ProfileID" ColumnName="fk_Admin_ProfileID" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="Modification_date" ColumnName="Modification_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="Deletion_date" ColumnName="Deletion_date" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suggestfeatures">
+      <EntityTypeMapping TypeName="row_productionModel.suggestfeature">
+        <MappingFragment StoreEntitySet="suggestfeature">
+          <ScalarProperty Name="suggestion_ID" ColumnName="suggestion_ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="fk_Member_ProfileID" ColumnName="fk_Member_ProfileID" />
+          <ScalarProperty Name="fk_group_Master_ID" ColumnName="fk_group_Master_ID" />
+          <ScalarProperty Name="Created_on" ColumnName="Created_on" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_exceptoinlog">
+      <EntityTypeMapping TypeName="row_productionModel.tbl_exceptoinlog">
+        <MappingFragment StoreEntitySet="tbl_exceptoinlog">
+          <ScalarProperty Name="pk_ExceptionAutoID" ColumnName="pk_ExceptionAutoID" />
+          <ScalarProperty Name="excep_CurrentPageName" ColumnName="excep_CurrentPageName" />
+          <ScalarProperty Name="excep_CurrentFunctionName" ColumnName="excep_CurrentFunctionName" />
+          <ScalarProperty Name="excep_InnerException" ColumnName="excep_InnerException" />
+          <ScalarProperty Name="excep_Message" ColumnName="excep_Message" />
+          <ScalarProperty Name="excep_StackTrace" ColumnName="excep_StackTrace" />
+          <ScalarProperty Name="excep_Recorddate" ColumnName="excep_Recorddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="touchbase_versionmaster">
+      <EntityTypeMapping TypeName="row_productionModel.touchbase_versionmaster">
+        <MappingFragment StoreEntitySet="touchbase_versionmaster">
+          <ScalarProperty Name="pk_VID" ColumnName="pk_VID" />
+          <ScalarProperty Name="Android" ColumnName="Android" />
+          <ScalarProperty Name="IOS" ColumnName="IOS" />
+          <ScalarProperty Name="DotNetVersion" ColumnName="DotNetVersion" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Creation_date" ColumnName="Creation_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="weblink_master">
+      <EntityTypeMapping TypeName="row_productionModel.weblink_master">
+        <MappingFragment StoreEntitySet="weblink_master">
+          <ScalarProperty Name="pk_master_id" ColumnName="pk_master_id" />
+          <ScalarProperty Name="fk_group_master_id" ColumnName="fk_group_master_id" />
+          <ScalarProperty Name="link_title" ColumnName="link_title" />
+          <ScalarProperty Name="link_description" ColumnName="link_description" />
+          <ScalarProperty Name="link_url" ColumnName="link_url" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modification_date" ColumnName="modification_date" />
+          <ScalarProperty Name="modification_by" ColumnName="modification_by" />
+          <ScalarProperty Name="deletion_date" ColumnName="deletion_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1051 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="touchbase_rowModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="touchbase_rowEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="announcement_repeatdate" EntityType="touchbase_rowModel.announcement_repeatdate" />
+    <EntitySet Name="announcements_details" EntityType="touchbase_rowModel.announcements_details" />
+    <EntitySet Name="announcements_master" EntityType="touchbase_rowModel.announcements_master" />
+    <EntitySet Name="attentance_master" EntityType="touchbase_rowModel.attentance_master" />
+    <EntitySet Name="committee_master" EntityType="touchbase_rowModel.committee_master" />
+    <EntitySet Name="country_master" EntityType="touchbase_rowModel.country_master" />
+    <EntitySet Name="deletedimages" EntityType="touchbase_rowModel.deletedimage" />
+    <EntitySet Name="district_master" EntityType="touchbase_rowModel.district_master" />
+    <EntitySet Name="document_details" EntityType="touchbase_rowModel.document_details" />
+    <EntitySet Name="document_safe" EntityType="touchbase_rowModel.document_safe" />
+    <EntitySet Name="event_details" EntityType="touchbase_rowModel.event_details" />
+    <EntitySet Name="event_details_member_response" EntityType="touchbase_rowModel.event_details_member_response" />
+    <EntitySet Name="event_master" EntityType="touchbase_rowModel.event_master" />
+    <EntitySet Name="event_question_options" EntityType="touchbase_rowModel.event_question_options" />
+    <EntitySet Name="event_questionnaire_master" EntityType="touchbase_rowModel.event_questionnaire_master" />
+    <EntitySet Name="event_repeatdate" EntityType="touchbase_rowModel.event_repeatdate" />
+    <EntitySet Name="external_link_master" EntityType="touchbase_rowModel.external_link_master" />
+    <EntitySet Name="gallery_image_details" EntityType="touchbase_rowModel.gallery_image_details" />
+    <EntitySet Name="gallery_master" EntityType="touchbase_rowModel.gallery_master" />
+    <EntitySet Name="gallery_member_details" EntityType="touchbase_rowModel.gallery_member_details" />
+    <EntitySet Name="group_admin_members" EntityType="touchbase_rowModel.group_admin_members" />
+    <EntitySet Name="group_category_master" EntityType="touchbase_rowModel.group_category_master" />
+    <EntitySet Name="group_dynamic_fields" EntityType="touchbase_rowModel.group_dynamic_fields" />
+    <EntitySet Name="group_info" EntityType="touchbase_rowModel.group_info" />
+    <EntitySet Name="group_master" EntityType="touchbase_rowModel.group_master" />
+    <EntitySet Name="group_member_fields" EntityType="touchbase_rowModel.group_member_fields" />
+    <EntitySet Name="group_memberfield_lookup" EntityType="touchbase_rowModel.group_memberfield_lookup" />
+    <EntitySet Name="group_modules" EntityType="touchbase_rowModel.group_modules" />
+    <EntitySet Name="image_table" EntityType="touchbase_rowModel.image_table" />
+    <EntitySet Name="improvement_details" EntityType="touchbase_rowModel.improvement_details" />
+    <EntitySet Name="improvement_master" EntityType="touchbase_rowModel.improvement_master" />
+    <EntitySet Name="language_label" EntityType="touchbase_rowModel.language_label" />
+    <EntitySet Name="language_master" EntityType="touchbase_rowModel.language_master" />
+    <EntitySet Name="main_member_master" EntityType="touchbase_rowModel.main_member_master" />
+    <EntitySet Name="member_address_detail" EntityType="touchbase_rowModel.member_address_detail" />
+    <EntitySet Name="member_dashboard" EntityType="touchbase_rowModel.member_dashboard" />
+    <EntitySet Name="member_family_master" EntityType="touchbase_rowModel.member_family_master" />
+    <EntitySet Name="member_log" EntityType="touchbase_rowModel.member_log" />
+    <EntitySet Name="member_master_profile" EntityType="touchbase_rowModel.member_master_profile" />
+    <EntitySet Name="member_profile_dynamic_fields" EntityType="touchbase_rowModel.member_profile_dynamic_fields" />
+    <EntitySet Name="member_profile_field_lookup" EntityType="touchbase_rowModel.member_profile_field_lookup" />
+    <EntitySet Name="member_profile_selected_fields" EntityType="touchbase_rowModel.member_profile_selected_fields" />
+    <EntitySet Name="module_master" EntityType="touchbase_rowModel.module_master" />
+    <EntitySet Name="newsletter_details" EntityType="touchbase_rowModel.newsletter_details" />
+    <EntitySet Name="newsletter_master" EntityType="touchbase_rowModel.newsletter_master" />
+    <EntitySet Name="notification_flag" EntityType="touchbase_rowModel.notification_flag" />
+    <EntitySet Name="service_directory" EntityType="touchbase_rowModel.service_directory" />
+    <EntitySet Name="settings_master" EntityType="touchbase_rowModel.settings_master" />
+    <EntitySet Name="single_field_master" EntityType="touchbase_rowModel.single_field_master" />
+    <EntitySet Name="subgroup_details" EntityType="touchbase_rowModel.subgroup_details" />
+    <EntitySet Name="subgroup_master" EntityType="touchbase_rowModel.subgroup_master" />
+    <EntitySet Name="suggestfeatures" EntityType="touchbase_rowModel.suggestfeature" />
+    <EntitySet Name="tbl_exceptoinlog" EntityType="touchbase_rowModel.tbl_exceptoinlog" />
+    <EntitySet Name="touchbase_versionmaster" EntityType="touchbase_rowModel.touchbase_versionmaster" />
+  </EntityContainer>
+  <EntityType Name="announcement_repeatdate">
+    <Key>
+      <PropertyRef Name="pk_ann_repeatdate_id" />
+    </Key>
+    <Property Name="pk_ann_repeatdate_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_ann_master_id" Type="Int32" />
+    <Property Name="Repeat_date" Type="DateTime" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="announcements_details">
+    <Key>
+      <PropertyRef Name="pk_announcements_details_id" />
+    </Key>
+    <Property Name="pk_announcements_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_announcements_master_id" Type="Int32" />
+    <Property Name="fk_member_master_profile_id" Type="Int32" />
+    <Property Name="fk_sub_group_id" Type="Int32" />
+    <Property Name="read_flag" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="ann_not_sent" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="announcements_master">
+    <Key>
+      <PropertyRef Name="pk_announcements_master_id" />
+    </Key>
+    <Property Name="pk_announcements_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="fk_module_id" Type="Int32" />
+    <Property Name="announcements_desc" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="announcements_title" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="announcement_img" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="notification_date" Type="DateTime" />
+    <Property Name="notification_time" Type="Time" />
+    <Property Name="publish_date" Type="DateTime" />
+    <Property Name="publish_time" Type="Time" />
+    <Property Name="fk_event_master_id" Type="Int32" />
+    <Property Name="notification_sent" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="blood_group" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="announcement_type" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="send_sms_flag" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="expiry_date" Type="DateTime" />
+    <Property Name="send_sms_all_flag" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="attentance_master">
+    <Key>
+      <PropertyRef Name="attendance_id" />
+    </Key>
+    <Property Name="attendance_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="Int32" />
+    <Property Name="fk_module_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="unique_id_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="attendance_percentage" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="attendance_month" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="attendance_year" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="SByte" />
+  </EntityType>
+  <EntityType Name="committee_master">
+    <Key>
+      <PropertyRef Name="committee_master_id" />
+    </Key>
+    <Property Name="committee_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="member_name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="member_designation" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="year" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LastEditedBy" Type="Int32" />
+    <Property Name="EnteredBy" Type="Int32" />
+    <Property Name="club_name" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="country_master">
+    <Key>
+      <PropertyRef Name="country_master_id" />
+    </Key>
+    <Property Name="country_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="country_master_name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="country_code" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="GMT_Opt" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="GMT_Time" Type="Time" />
+  </EntityType>
+  <EntityType Name="deletedimage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="FileDelete" Type="Int32" />
+    <Property Name="ModuleName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="deletedOn" Type="DateTime" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="district_master">
+    <Key>
+      <PropertyRef Name="pk_district_master_id" />
+    </Key>
+    <Property Name="pk_district_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="grand_total" Type="Decimal" />
+    <Property Name="district_number" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="zone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dist_amt_balance" Type="Int32" />
+    <Property Name="dist_last_pack_purchase_amt" Type="Int32" />
+    <Property Name="BirthText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="AnnText" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="renewal_sub_amount" Type="Decimal" />
+    <Property Name="from_date" Type="DateTime" />
+    <Property Name="to_date" Type="DateTime" />
+    <Property Name="Import_flag_10" Type="Int32" />
+    <Property Name="SMS_Pack_Update_Date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="document_details">
+    <Key>
+      <PropertyRef Name="pk_document_details_id" />
+    </Key>
+    <Property Name="pk_document_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_document_id" Type="Int32" />
+    <Property Name="fk_member_master_profile_id" Type="Int32" />
+    <Property Name="fk_sub_group_id" Type="Int32" />
+    <Property Name="read_flag" Type="Int32" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="document_safe">
+    <Key>
+      <PropertyRef Name="pk_document_id" />
+    </Key>
+    <Property Name="pk_document_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="document_access_type" Type="Int32" />
+    <Property Name="document_title" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="document_path" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="document_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="document_ext" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="modify_by" Type="Int32" />
+    <Property Name="modify_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deleted_on" Type="DateTime" />
+    <Property Name="isdeleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="event_details">
+    <Key>
+      <PropertyRef Name="pk_event_detail_id" />
+    </Key>
+    <Property Name="pk_event_detail_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_id" Type="Int32" />
+    <Property Name="fk_SubGroupMaster_Id" Type="Int32" />
+    <Property Name="fk_member_master_id" Type="Int32" />
+    <Property Name="event_child_flag" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="event_child_people" Type="Int32" />
+    <Property Name="event_response_date" Type="DateTime" />
+    <Property Name="event_read_flag" Type="Int32" />
+    <Property Name="event_notification_sent" Type="SByte" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="event_details_member_response">
+    <Key>
+      <PropertyRef Name="PK_memberResponse_Id" />
+    </Key>
+    <Property Name="PK_memberResponse_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fk_Event_Details_Id" Type="Int32" />
+    <Property Name="Fk_Event_Question_ID" Type="Int32" />
+    <Property Name="Answer" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="ResponseDate" Type="DateTime" />
+    <Property Name="fk_event_master_id" Type="Int32" />
+    <Property Name="fk_member_profile_id" Type="Int32" />
+    <Property Name="member_RSVP_Response" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="event_master">
+    <Key>
+      <PropertyRef Name="pk_event_master_id" />
+    </Key>
+    <Property Name="pk_event_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="fk_subgroup_master_id" Type="Int32" />
+    <Property Name="event_title" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="event_desc" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="event_img" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="event_date" Type="DateTime" />
+    <Property Name="event_time" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="event_venue" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="venue_lat" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="venue_long" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="publish_Date" Type="DateTime" />
+    <Property Name="publish_Time" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="expiry_Date" Type="DateTime" />
+    <Property Name="expiry_Time" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="event_cut_off_date" Type="DateTime" />
+    <Property Name="notification_start_date" Type="DateTime" />
+    <Property Name="notification_start_time" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="event_enable" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="questionEnable" Type="Int32" />
+    <Property Name="event_type" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="rsvp_enable" Type="Int32" />
+    <Property Name="notification_sent" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="send_sms_flag" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="send_sms_all_flag" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="event_question_options">
+    <Key>
+      <PropertyRef Name="pk_optionID" />
+    </Key>
+    <Property Name="pk_optionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_questionID" Type="Int32" />
+    <Property Name="optionText" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="event_questionnaire_master">
+    <Key>
+      <PropertyRef Name="pk_event_questionID" />
+    </Key>
+    <Property Name="pk_event_questionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_ID" Type="Int32" />
+    <Property Name="question_type" Type="Int32" />
+    <Property Name="question_text" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="option1" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="option2" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="CreationDate" Type="DateTime" />
+    <Property Name="Created_by" Type="Int32" />
+    <Property Name="Isdeleted" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="Int32" />
+    <Property Name="deleted_by" Type="Int32" />
+  </EntityType>
+  <EntityType Name="event_repeatdate">
+    <Key>
+      <PropertyRef Name="pk_event_repeatdate_id" />
+    </Key>
+    <Property Name="pk_event_repeatdate_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_event_master_id" Type="Int32" />
+    <Property Name="Repeat_date" Type="DateTime" />
+    <Property Name="repeat_time" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="external_link_master">
+    <Key>
+      <PropertyRef Name="pk_linkId" />
+    </Key>
+    <Property Name="pk_linkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_Id" Type="Int32" />
+    <Property Name="fk_module_master_id" Type="Int32" />
+    <Property Name="link" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="Creation_date" Type="DateTime" />
+    <Property Name="Modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LableText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="gallery_image_details">
+    <Key>
+      <PropertyRef Name="pk_gallery_image_details_id" />
+    </Key>
+    <Property Name="pk_gallery_image_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_gallery_id" Type="Int32" />
+    <Property Name="image_name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="image_description" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="gallery_master">
+    <Key>
+      <PropertyRef Name="pk_gallery_id" />
+    </Key>
+    <Property Name="pk_gallery_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="album_title" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="album_desc" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="album_image" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="album_type" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="gallery_member_details">
+    <Key>
+      <PropertyRef Name="pk_gallery_member_details_id" />
+    </Key>
+    <Property Name="pk_gallery_member_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_gallery_id" Type="Int32" />
+    <Property Name="fk_member_master_profile_id" Type="Int32" />
+    <Property Name="fk_sub_group_id" Type="Int32" />
+    <Property Name="read_flag" Type="SByte" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="SByte" />
+  </EntityType>
+  <EntityType Name="group_admin_members">
+    <Key>
+      <PropertyRef Name="pk_group_admin_id" />
+    </Key>
+    <Property Name="pk_group_admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_member_master_id" Type="Int32" />
+    <Property Name="pwd" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="mobile_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="user_Role" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="dg_role" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="group_category_master">
+    <Key>
+      <PropertyRef Name="group_category_id" />
+    </Key>
+    <Property Name="group_category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="flag" Type="Int32" />
+  </EntityType>
+  <EntityType Name="group_dynamic_fields">
+    <Key>
+      <PropertyRef Name="pk_fieldID" />
+    </Key>
+    <Property Name="pk_fieldID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="Field_Title" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Field_Type" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Field_category" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="IsEditableByMember" Type="SByte" />
+    <Property Name="OrderNo" Type="Int32" />
+    <Property Name="Created_By" Type="Int32" />
+    <Property Name="Created_on" Type="DateTime" />
+    <Property Name="Modified_On" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Isdeleted" Type="Int32" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deleted_on" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="group_info">
+    <Key>
+      <PropertyRef Name="pk_grpinfo_id" />
+    </Key>
+    <Property Name="pk_grpinfo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="Int32" />
+    <Property Name="fk_module_id" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="isdeleted" Type="SByte" />
+  </EntityType>
+  <EntityType Name="group_master">
+    <Key>
+      <PropertyRef Name="pk_group_master_id" />
+    </Key>
+    <Property Name="pk_group_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_district_master_id" Type="Int32" />
+    <Property Name="district_number" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="group_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="group_type" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="group_category" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="club_id" Type="Int32" />
+    <Property Name="club_Key" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="address1" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="address2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="group_email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="pincode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="fk_state_master_id" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fk_city_master_id" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fk_country_master_id" Type="Int32" />
+    <Property Name="contact_no" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="phone_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="club_history" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="memberCount" Type="Int64" />
+    <Property Name="fromDate" Type="DateTime" />
+    <Property Name="toDate" Type="DateTime" />
+    <Property Name="club_image" Type="String" MaxLength="245" Unicode="false" FixedLength="false" />
+    <Property Name="club_website" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="bdayann_smsreq" Type="Int32" />
+    <Property Name="club_rules" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="club_bylaws" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="SMSCount" Type="Int64" />
+    <Property Name="establish_date" Type="DateTime" />
+    <Property Name="club_amt_balance" Type="Int32" />
+    <Property Name="club_last_pack_purchase_amt" Type="Int32" />
+    <Property Name="club_meeting_from_time" Type="Time" />
+    <Property Name="club_meeting_to_time" Type="Time" />
+    <Property Name="club_meeting_day" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="meeting_notification" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="Last_SMS_sent_on" Type="Int32" />
+    <Property Name="SMS_Pack_Update_Date" Type="DateTime" />
+    <Property Name="spouse_login" Type="Int32" />
+    <Property Name="club_latitude" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="club_longitude" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="Boolean" />
+    <Property Name="country_name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="group_member_fields">
+    <Key>
+      <PropertyRef Name="pk_group_member_fields_id" />
+    </Key>
+    <Property Name="pk_group_member_fields_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" Nullable="false" />
+    <Property Name="field_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="order_by" Type="Int32" Nullable="false" />
+    <Property Name="sub_module_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" Nullable="false" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" Nullable="false" />
+    <Property Name="deletion_date" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_by" Type="Int32" Nullable="false" />
+    <Property Name="isdeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group_memberfield_lookup">
+    <Key>
+      <PropertyRef Name="pk_lookupId" />
+    </Key>
+    <Property Name="pk_lookupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Id" Type="Int32" />
+    <Property Name="DisplayName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DBColumnName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ColType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="group_modules">
+    <Key>
+      <PropertyRef Name="pk_group_modules_id" />
+    </Key>
+    <Property Name="pk_group_modules_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="fk_module_master_id" Type="Int32" />
+    <Property Name="module_newname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="module_oldname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="module_image" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="module_priority" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="image_table">
+    <Key>
+      <PropertyRef Name="pk_image_id" />
+    </Key>
+    <Property Name="pk_image_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Module_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="File_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="improvement_details">
+    <Key>
+      <PropertyRef Name="pk_improvement_details_id" />
+    </Key>
+    <Property Name="pk_improvement_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_improvement_master_id" Type="Int32" />
+    <Property Name="fk_member_master_profile_id" Type="Int32" />
+    <Property Name="fk_sub_group_id" Type="Int32" />
+    <Property Name="read_flag" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="ann_not_sent" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="improvement_master">
+    <Key>
+      <PropertyRef Name="pk_improvement_master_id" />
+    </Key>
+    <Property Name="pk_improvement_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="improvement_desc" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="improvement_title" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="improvement_img" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="notification_date" Type="DateTime" />
+    <Property Name="notification_time" Type="Time" />
+    <Property Name="publish_date" Type="DateTime" />
+    <Property Name="publish_time" Type="Time" />
+    <Property Name="fk_event_master_id" Type="Int32" />
+    <Property Name="notification_sent" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="improvement_type" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="send_sms_flag" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="expiry_date" Type="DateTime" />
+    <Property Name="send_sms_all_flag" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="language_label">
+    <Key>
+      <PropertyRef Name="pk_language_label_id" />
+    </Key>
+    <Property Name="pk_language_label_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="label" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="english" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="french" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="hindi" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" Nullable="false" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" Nullable="false" />
+    <Property Name="deletion_date" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_by" Type="Int32" Nullable="false" />
+    <Property Name="isdeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="language_master">
+    <Key>
+      <PropertyRef Name="pk_language_master_id" />
+    </Key>
+    <Property Name="pk_language_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="language_name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="display_name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" Nullable="false" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" Nullable="false" />
+    <Property Name="deletion_date" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_by" Type="Int32" Nullable="false" />
+    <Property Name="isdeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="main_member_master">
+    <Key>
+      <PropertyRef Name="pk_main_member_master_id" />
+    </Key>
+    <Property Name="pk_main_member_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="member_name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="member_mobile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fk_country_id" Type="Int32" />
+    <Property Name="ProfilePic_Path" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="member_emailid" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IMEI_No" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceToken" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Device_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="versionNo" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="registerForChat" Type="Boolean" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="member_address_detail">
+    <Key>
+      <PropertyRef Name="pk_address_id" />
+    </Key>
+    <Property Name="pk_address_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_profile_id" Type="Int32" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="fk_city_id" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fk_state_id" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fk_country_id" Type="Int32" />
+    <Property Name="pincode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="phone_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="fax" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Address_Type" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="created_By" Type="Int32" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="Int32" />
+    <Property Name="Isdeleted" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="BusinessName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="row_member_master_id" Type="Int32" />
+    <Property Name="country_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="member_dashboard">
+    <Key>
+      <PropertyRef Name="pk_dashboard_ID" />
+    </Key>
+    <Property Name="pk_dashboard_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_master_profile_ID" Type="Int32" />
+    <Property Name="fk_ModuleID" Type="Int32" />
+    <Property Name="modification_Date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Isdeleted" Type="SByte" />
+    <Property Name="deletion_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="member_family_master">
+    <Key>
+      <PropertyRef Name="pk_member_family_master_id" />
+    </Key>
+    <Property Name="pk_member_family_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_main_member_master_id" Type="Int32" />
+    <Property Name="member_name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="member_relationship" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fk_country_id" Type="Int32" />
+    <Property Name="member_contact_no" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="member_date_of_birth" Type="DateTime" />
+    <Property Name="member_date_of_wedding" Type="DateTime" />
+    <Property Name="member_blood_group" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="EmailId" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="particulars" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+    <Property Name="row_member_master_id" Type="Int32" />
+    <Property Name="IsRotarian" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="member_log">
+    <Key>
+      <PropertyRef Name="pk_member_log_id" />
+    </Key>
+    <Property Name="pk_member_log_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_member_master_profile_id" Type="Int32" Nullable="false" />
+    <Property Name="fk_module_master_id" Type="Int32" Nullable="false" />
+    <Property Name="visit_date_time" Type="DateTime" Nullable="false" />
+    <Property Name="creation_date" Type="DateTime" Nullable="false" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" Nullable="false" />
+    <Property Name="deletion_date" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_by" Type="Int32" Nullable="false" />
+    <Property Name="isdeleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="member_master_profile">
+    <Key>
+      <PropertyRef Name="pk_member_master_profile_id" />
+    </Key>
+    <Property Name="pk_member_master_profile_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="fk_main_member_master_id" Type="Int32" />
+    <Property Name="member_name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="blood_Group" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="member_date_of_issue" Type="DateTime" />
+    <Property Name="member_phone_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="fk_country_ID" Type="Int32" />
+    <Property Name="member_mobile_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="secondry_mobile_no" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="member_fax_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="group_category" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="member_email_id" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="member_date_of_birth" Type="DateTime" />
+    <Property Name="member_family_photo_path" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="member_profile_photo_path" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="member_profile_status" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="member_date_of_wedding" Type="DateTime" />
+    <Property Name="designation" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="BusinessName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="member_buss_email" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_role" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="app_device_token_id" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="device_name" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="notification_enable" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="metataging" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IsBussDetailVisible" Type="Int32" />
+    <Property Name="IsPersonalDetailVisible" Type="Int32" />
+    <Property Name="IsFamilyDetailVisi1ble" Type="Int32" />
+    <Property Name="IsMobileVisible" Type="Int32" />
+    <Property Name="IsEmailVisible" Type="Int32" />
+    <Property Name="IdentificationCode" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="registerForChat" Type="SByte" />
+    <Property Name="particulars" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="member_rotary_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="member_master_designation" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="dg_master_designation" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="dg_role" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isBOD" Type="SByte" />
+    <Property Name="BODorderNumber" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+    <Property Name="club_name" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="country_name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="club_id" Type="Int32" />
+    <Property Name="row_member_master_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="member_profile_dynamic_fields">
+    <Key>
+      <PropertyRef Name="pk_fieldValueID" />
+    </Key>
+    <Property Name="pk_fieldValueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_MemberProfileID" Type="Int32" />
+    <Property Name="fk_DynamicFieldID" Type="Int32" />
+    <Property Name="fieldValue" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modified_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+  </EntityType>
+  <EntityType Name="member_profile_field_lookup">
+    <Key>
+      <PropertyRef Name="pkFieldSetId" />
+    </Key>
+    <Property Name="pkFieldSetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fieldName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dbColumnName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="colType" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="fieldType" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="mandatory" Type="Int32" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="createdBy" Type="Int32" />
+    <Property Name="createdOn" Type="DateTime" />
+    <Property Name="isdeleted" Type="SByte" />
+  </EntityType>
+  <EntityType Name="member_profile_selected_fields">
+    <Key>
+      <PropertyRef Name="pk_id" />
+    </Key>
+    <Property Name="pk_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="Int32" />
+    <Property Name="fk_fieldID" Type="Int32" />
+    <Property Name="field_name" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="field_new_name" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="db_column_name" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="colType" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="field_type" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="order_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isdeleted" Type="SByte" />
+  </EntityType>
+  <EntityType Name="module_master">
+    <Key>
+      <PropertyRef Name="pk_module_master_id" />
+    </Key>
+    <Property Name="pk_module_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="module_name" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="module_static_ref" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="replica_of_module" Type="Int32" />
+    <Property Name="module_price_rs" Type="Single" />
+    <Property Name="module_price_usd" Type="Single" />
+    <Property Name="image" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="module_info" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="phase" Type="Int32" Nullable="false" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="newsletter_details">
+    <Key>
+      <PropertyRef Name="pk_newsletter_details_id" />
+    </Key>
+    <Property Name="pk_newsletter_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_newsletter_master_id" Type="Int32" />
+    <Property Name="fk_member_master_id" Type="Int32" />
+    <Property Name="fk_sub_group_id" Type="Int32" />
+    <Property Name="read_flag" Type="Boolean" />
+    <Property Name="Notification_sent" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="newsletter_master">
+    <Key>
+      <PropertyRef Name="pk_newsletter_master_id" />
+    </Key>
+    <Property Name="pk_newsletter_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="newsletter_title" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="newsletter_link" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="newsletter_filepath" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="publish_date" Type="DateTime" />
+    <Property Name="expiry_date" Type="DateTime" />
+    <Property Name="newsletter_type" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="send_SMS_Flag" Type="Int32" />
+    <Property Name="send_SMS_all_Flag" Type="Int32" />
+    <Property Name="newsletter_from" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="newsletter_date" Type="DateTime" />
+    <Property Name="publish_time" Type="Time" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="isdeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="notification_flag">
+    <Key>
+      <PropertyRef Name="notification_flag_id" />
+    </Key>
+    <Property Name="notification_flag_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="app_device_token_id" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="module_name" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="not_desc" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="last_updated_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="inc" Type="Int32" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="memberId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="service_directory">
+    <Key>
+      <PropertyRef Name="pk_service_id" />
+    </Key>
+    <Property Name="pk_service_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_id" Type="Int32" />
+    <Property Name="fk_module_id" Type="Int32" />
+    <Property Name="member_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="image" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="country_code1" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="mobile_no1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="country_code2" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="mobile_no2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="pax_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="keywords" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="16777215" Unicode="false" FixedLength="false" />
+    <Property Name="adress_country" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="city" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="state" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="zipcode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="latitude" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="longitude" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modification_by" Type="Int32" />
+    <Property Name="modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="settings_master">
+    <Key>
+      <PropertyRef Name="pk_setting_id" />
+    </Key>
+    <Property Name="pk_setting_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="fk_module_master_id" Type="Int32" />
+    <Property Name="fk_member_profile_id" Type="Int32" />
+    <Property Name="notification_enable" Type="Int32" />
+    <Property Name="updated_on" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="single_field_master">
+    <Key>
+      <PropertyRef Name="pk_single_field_master_id" />
+    </Key>
+    <Property Name="pk_single_field_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="single_field_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="english" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="french" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="hindi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="isdeleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="subgroup_details">
+    <Key>
+      <PropertyRef Name="pk_subgroup_details_id" />
+    </Key>
+    <Property Name="pk_subgroup_details_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_subgroup_id" Type="Int32" />
+    <Property Name="fk_member_master_profile_id" Type="Int32" />
+    <Property Name="isdeleted" Type="Int32" />
+    <Property Name="deletion_date" Type="DateTime" />
+    <Property Name="deleted_by" Type="Int32" />
+  </EntityType>
+  <EntityType Name="subgroup_master">
+    <Key>
+      <PropertyRef Name="pk_subgroup_id" />
+    </Key>
+    <Property Name="pk_subgroup_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_group_master_id" Type="Int32" />
+    <Property Name="subgroup_title" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="subgrp_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Desc" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="subgroup_img" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="fk_subgrp_ParentID" Type="Int32" />
+    <Property Name="fk_Admin_ProfileID" Type="Int32" />
+    <Property Name="Level" Type="Int32" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="creation_date" Type="DateTime" />
+    <Property Name="modified_by" Type="Int32" />
+    <Property Name="Modification_date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deleted_by" Type="Int32" />
+    <Property Name="Deletion_date" Type="DateTime" />
+    <Property Name="isdeleted" Type="SByte" />
+  </EntityType>
+  <EntityType Name="suggestfeature">
+    <Key>
+      <PropertyRef Name="suggestion_ID" />
+    </Key>
+    <Property Name="suggestion_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="fk_Member_ProfileID" Type="Int32" />
+    <Property Name="fk_group_Master_ID" Type="Int32" />
+    <Property Name="Created_on" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tbl_exceptoinlog">
+    <Key>
+      <PropertyRef Name="pk_ExceptionAutoID" />
+    </Key>
+    <Property Name="pk_ExceptionAutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="excep_CurrentPageName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="excep_CurrentFunctionName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="excep_InnerException" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="excep_Message" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="excep_StackTrace" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="excep_Recorddate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="touchbase_versionmaster">
+    <Key>
+      <PropertyRef Name="pk_VID" />
+    </Key>
+    <Property Name="pk_VID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Android" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IOS" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DotNetVersion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="Creation_date" Type="DateTime" />
+  </EntityType>
+</Schema>

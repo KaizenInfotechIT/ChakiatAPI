@@ -1,0 +1,5 @@
+D:\Data\Rupali\TouchbaseInviteMember\TouchbaseInviteMember\bin\TouchbaseInviteMember.dll
+D:\Data\Rupali\TouchbaseInviteMember\TouchbaseInviteMember\bin\TouchbaseInviteMember.pdb
+D:\Data\Rupali\TouchbaseInviteMember\TouchbaseInviteMember\obj\Debug\TouchbaseInviteMember.dll
+D:\Data\Rupali\TouchbaseInviteMember\TouchbaseInviteMember\obj\Debug\TouchbaseInviteMember.pdb
+D:\Data\Rupali\TouchbaseInviteMember\TouchbaseInviteMember\obj\Debug\TouchbaseInviteMember.csprojResolveAssemblyReference.cache
