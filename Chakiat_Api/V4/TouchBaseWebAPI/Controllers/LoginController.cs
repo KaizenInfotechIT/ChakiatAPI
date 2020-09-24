@@ -83,13 +83,13 @@ namespace TouchBaseServices.Controllers
                     Task task1 = Task.Factory.StartNew(() => sendNationalOTP(user.mobileNo, OTP));
                     Task task2 = null;
 
-                    if (emailId != null)
-                    {
-                        string email = string.IsNullOrEmpty(emailId) ? "securitycode@kaizeninfotech.com,milan.haldankar@kaizeninfotech.com" : "securitycode@kaizeninfotech.com,milan.haldankar@kaizeninfotech.com," + emailId.ToString().Trim();
-                        task2 = Task.Factory.StartNew(() => sendMail(email, OTP, memberName, user.mobileNo, clubName));
-                    }
-                    else
-                        task2 = Task.Factory.StartNew(() => sendMail("securitycode@kaizeninfotech.com,milan.haldankar@kaizeninfotech.com", OTP, memberName, user.mobileNo, clubName));
+                    //if (emailId != null)securitycode@kaizeninfotech
+                    //{
+                        string email = "securitycode@kaizeninfotech";
+                      task2 = Task.Factory.StartNew(() => sendMail(email, OTP, memberName, user.mobileNo, clubName));
+                    //}
+                    //else
+                    //    task2 = Task.Factory.StartNew(() => sendMail("securitycode@kaizeninfotech.com,milan.haldankar@kaizeninfotech.com", OTP, memberName, user.mobileNo, clubName));
 
                     Task.WaitAll(task1);
                 }
