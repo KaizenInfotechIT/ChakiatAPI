@@ -1002,7 +1002,7 @@ namespace TouchBaseWebAPI.BusinessEntities
             try
             {
 
-                //Code By Nikhil //To fetch last Visited datetime 
+                //Code By Nikhil //To fetch last Visited datetime . 
                 MemberSearch memberSearch = new MemberSearch();
                 memberSearch.profileId = "494";
                 updatedOn = getLastVisitedDatatime(memberSearch.profileId);
