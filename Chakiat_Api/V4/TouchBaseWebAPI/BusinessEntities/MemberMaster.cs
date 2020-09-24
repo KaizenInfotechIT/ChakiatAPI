@@ -985,15 +985,17 @@ namespace TouchBaseWebAPI.BusinessEntities
 
                 string result = Convert.ToString(MySqlHelper.ExecuteScalar(GlobalVar.strAppConn, CommandType.Text, sqlQuery.ToString(), param));
 
+                result = Convert.ToDateTime(result).ToString("yyyy/MM/dd HH:mm:ss").Replace("-","/");
+
                 return result;
             }
             catch (Exception)
             {
-                return "1970-01-01 00:00:00";
+                return "1970/01/01 00:00:00";
             }
         }
 
-        public static MemberListSyncResult GetMemberListSync(string updatedOn, string grpID, out string filepath)
+        public static MemberListSyncResult GetMemberListSync(string updatedOn,string profileId,string grpID, out string filepath)
         {
             #region this is new code written by Mukesh Dhole on 15 jun 2018
             bool isDataFound = false;
@@ -1002,10 +1004,8 @@ namespace TouchBaseWebAPI.BusinessEntities
             try
             {
 
-                //Code By Nikhil //To fetch last Visited datetime . 
-                MemberSearch memberSearch = new MemberSearch();
-                memberSearch.profileId = "494";
-                updatedOn = getLastVisitedDatatime(memberSearch.profileId);
+                //Code By Nikhil //To fetch last Visited datetime .             
+                updatedOn = getLastVisitedDatatime(profileId);
 
                 //DataSet result;
                 CallForMemberDetails(updatedOn, grpID, out filepath, out result);
@@ -1170,8 +1170,11 @@ namespace TouchBaseWebAPI.BusinessEntities
                                 dt_FilterNewDynamicFields = dv_FilterNewDynamicFields.ToTable();
                             }
 
-                          // MemberDetailsDynamicField memberdtl = GetMemberDtlWithDynamicFeildByDatatables(dtnewMember.Rows[i]["profileID"].ToString(), dt_FilterNewMember, dt_FilterNewPersonal, dt_FilterNewBuisness, dt_FilterNewAddress, dt_FilterNewFamilyMember, dt_newSettings, dt_FilterNewDynamicFields);
-                          //  memberList.Add(memberdtl);
+                            MemberDetailsDynamicField memberdtl = GetMemberDtlWithDynamicFeildByDatatables(dtnewMember.Rows[i]["profileID"].ToString(), dt_FilterNewMember, dt_FilterNewPersonal, dt_FilterNewBuisness, dt_FilterNewAddress, dt_FilterNewFamilyMember, dt_newSettings, dt_FilterNewDynamicFields);
+                            memberList.Add(memberdtl);
+
+                            // MemberDetailsDynamicField memberdtl = GetMemberDtlWithDynamicFeildByDatatables(dtnewMember.Rows[i]["profileID"].ToString(), dt_FilterNewMember, dt_FilterNewPersonal, dt_FilterNewBuisness, dt_FilterNewAddress, dt_FilterNewFamilyMember, dt_newSettings, dt_FilterNewDynamicFields);
+                            //  memberList.Add(memberdtl);
                         }
                     }
                     memListSyncResult.NewMemberList = memberList;
