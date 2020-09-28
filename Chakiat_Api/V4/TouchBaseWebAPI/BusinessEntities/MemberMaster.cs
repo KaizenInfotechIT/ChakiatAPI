@@ -985,17 +985,15 @@ namespace TouchBaseWebAPI.BusinessEntities
 
                 string result = Convert.ToString(MySqlHelper.ExecuteScalar(GlobalVar.strAppConn, CommandType.Text, sqlQuery.ToString(), param));
 
-                result = Convert.ToDateTime(result).ToString("yyyy/MM/dd HH:mm:ss").Replace("-","/");
-
                 return result;
             }
             catch (Exception)
             {
-                return "1970/01/01 00:00:00";
+                return "1970-01-01 00:00:00";
             }
         }
 
-        public static MemberListSyncResult GetMemberListSync(string updatedOn,string grpID, out string filepath)
+        public static MemberListSyncResult GetMemberListSync(string updatedOn, string grpID, out string filepath)
         {
             #region this is new code written by Mukesh Dhole on 15 jun 2018
             bool isDataFound = false;
@@ -1004,10 +1002,10 @@ namespace TouchBaseWebAPI.BusinessEntities
             try
             {
 
-                //Code By Nikhil //To fetch last Visited datetime .             
-                //updatedOn = getLastVisitedDatatime(profileId);
-
-                updatedOn = Convert.ToDateTime(updatedOn).ToString("yyyy/MM/dd HH:mm:ss").Replace("-", "/");
+                //Code By Nikhil //To fetch last Visited datetime . 
+                MemberSearch memberSearch = new MemberSearch();
+                memberSearch.profileId = "494";
+                updatedOn = getLastVisitedDatatime(memberSearch.profileId);
 
                 //DataSet result;
                 CallForMemberDetails(updatedOn, grpID, out filepath, out result);
@@ -1019,11 +1017,11 @@ namespace TouchBaseWebAPI.BusinessEntities
 
                 //get distinct New member details 
                 DataView vw_newMemberDetails = new DataView(result.Tables[1]);
-                DataTable dt_newMemberDetails = vw_newMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "Salutation", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "Branch_Name");
+                DataTable dt_newMemberDetails = vw_newMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "Branch_Name");
 
                 //get distinct New member personal details
                 DataView vw_newPersonal = new DataView(result.Tables[2]);
-                DataTable dt_newPersonal = vw_newPersonal.ToTable(true, "profileID", "Salutation", "member_name", "member_email_id", "memberMobile", "memberCountry", "member_date_of_birth", "member_date_of_wedding", "Employee_Code_One", "First_Level_of_Reporting_Name", "Employee_Code_2", "Second_LevelofReportingName", "UHID", "Official_Landline_No", "Second_Official_Landline_No", "Date_of_Joining", "Fk_Dept_ID", "Fk_FunctionalRole_Id", "fk_EntityName_id", "fk_designation_id", "department_Name", "functionalrole_Name", "Entity_Name", "Designation_Name", "Employee_Code", "Branch_Id", "Branch_Name");
+                DataTable dt_newPersonal = vw_newPersonal.ToTable(true, "profileID", "member_name", "member_email_id", "memberMobile", "memberCountry", "member_date_of_birth", "member_date_of_wedding", "Employee_Code_One", "First_Level_of_Reporting_Name", "Employee_Code_2", "Second_LevelofReportingName", "UHID", "Official_Landline_No", "Second_Official_Landline_No", "Date_of_Joining", "Fk_Dept_ID", "Fk_FunctionalRole_Id", "fk_EntityName_id", "fk_designation_id", "department_Name", "functionalrole_Name", "Entity_Name", "Designation_Name", "Employee_Code", "Branch_Id", "Branch_Name");
 
                 //get distinct New member Buisness details
                 DataView vw_newBuisness = new DataView(result.Tables[3]);
@@ -1064,11 +1062,11 @@ namespace TouchBaseWebAPI.BusinessEntities
 
                 //get distinct Updated member details 
                 DataView vw_UpdateMemberDetails = new DataView(result.Tables[9]);
-                DataTable dt_UpdateMemberDetails = vw_UpdateMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "Salutation", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "Branch_Name");
+                DataTable dt_UpdateMemberDetails = vw_UpdateMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "Branch_Name");
 
                 //get distinct Updated member personal details
                 DataView vw_UpdatePersonal = new DataView(result.Tables[10]);
-                DataTable dt_UpdatePersonal = vw_UpdatePersonal.ToTable(true, "profileID", "Salutation", "member_name", "memberMobile", "member_email_id", "member_date_of_birth", "member_date_of_wedding", "Employee_Code_One", "First_Level_of_Reporting_Name", "Employee_Code_2", "Second_LevelofReportingName", "UHID", "Official_Landline_No", "Second_Official_Landline_No", "Date_of_Joining", "Fk_Dept_ID", "Fk_FunctionalRole_Id", "fk_EntityName_id", "fk_designation_id", "department_Name", "functionalrole_Name", "Entity_Name", "Designation_Name", "Employee_Code", "Branch_Id", "Branch_Name");
+                DataTable dt_UpdatePersonal = vw_UpdatePersonal.ToTable(true, "profileID", "member_name", "memberMobile", "member_email_id", "member_date_of_birth", "member_date_of_wedding", "Employee_Code_One", "First_Level_of_Reporting_Name", "Employee_Code_2", "Second_LevelofReportingName", "UHID", "Official_Landline_No", "Second_Official_Landline_No", "Date_of_Joining", "Fk_Dept_ID", "Fk_FunctionalRole_Id", "fk_EntityName_id", "fk_designation_id", "department_Name", "functionalrole_Name", "Entity_Name", "Designation_Name", "Employee_Code", "Branch_Id", "Branch_Name");
 
                 //get distinct Updated member Buisness details
                 DataView vw_UpdateBuisness = new DataView(result.Tables[11]);
@@ -1172,11 +1170,8 @@ namespace TouchBaseWebAPI.BusinessEntities
                                 dt_FilterNewDynamicFields = dv_FilterNewDynamicFields.ToTable();
                             }
 
-                            MemberDetailsDynamicField memberdtl = GetMemberDtlWithDynamicFeildByDatatables(dtnewMember.Rows[i]["profileID"].ToString(), dt_FilterNewMember, dt_FilterNewPersonal, dt_FilterNewBuisness, dt_FilterNewAddress, dt_FilterNewFamilyMember, dt_newSettings, dt_FilterNewDynamicFields);
-                            memberList.Add(memberdtl);
-
-                            // MemberDetailsDynamicField memberdtl = GetMemberDtlWithDynamicFeildByDatatables(dtnewMember.Rows[i]["profileID"].ToString(), dt_FilterNewMember, dt_FilterNewPersonal, dt_FilterNewBuisness, dt_FilterNewAddress, dt_FilterNewFamilyMember, dt_newSettings, dt_FilterNewDynamicFields);
-                            //  memberList.Add(memberdtl);
+                          // MemberDetailsDynamicField memberdtl = GetMemberDtlWithDynamicFeildByDatatables(dtnewMember.Rows[i]["profileID"].ToString(), dt_FilterNewMember, dt_FilterNewPersonal, dt_FilterNewBuisness, dt_FilterNewAddress, dt_FilterNewFamilyMember, dt_newSettings, dt_FilterNewDynamicFields);
+                          //  memberList.Add(memberdtl);
                         }
                     }
                     memListSyncResult.NewMemberList = memberList;
@@ -1467,7 +1462,7 @@ namespace TouchBaseWebAPI.BusinessEntities
                 #endregion
                 return memListSyncResult;
             }
-            catch(Exception ex)
+            catch
             {
                 throw;
             }
@@ -1493,7 +1488,7 @@ namespace TouchBaseWebAPI.BusinessEntities
 
                             //get distinct New member details 
                             DataView vw_newMemberDetails = new DataView(result.Tables[1]);
-                            DataTable dt_newMemberDetails = vw_newMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "Branch_Name");
+                            DataTable dt_newMemberDetails = vw_newMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "Branch_Name","Designation_Id", "Entity_Id");
 
                             //get distinct New member personal details
                             DataView vw_newPersonal = new DataView(result.Tables[2]);
@@ -1540,7 +1535,7 @@ namespace TouchBaseWebAPI.BusinessEntities
 
                             //get distinct Updated member details 
                             DataView vw_UpdateMemberDetails = new DataView(result.Tables[9]);
-                            DataTable dt_UpdateMemberDetails = vw_UpdateMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "familyPic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "isBusinDetVisible", "isFamilDetailVisible", "Branch_Name");
+                            DataTable dt_UpdateMemberDetails = vw_UpdateMemberDetails.ToTable(true, "profileID", "masterID", "grpID", "memberName", "memberEmail", "memberMobile", "memberCountry", "profilePic", "familyPic", "isAdmin", "isPersonalDetVisible", "Branch_Id", "isBusinDetVisible", "isFamilDetailVisible", "Branch_Name", "Designation_Id", "Entity_Id");
 
                             //get distinct Updated member personal details
                             DataView vw_UpdatePersonal = new DataView(result.Tables[10]);
