@@ -257,6 +257,7 @@ namespace TouchBaseWebAPI.Models
         public string grpID { get; set; }
         public string profileID { get; set; }
         public string isAdmin { get; set; }
+        public string Salutation { get; set; }
         public string memberName { get; set; }
         public string memberEmail { get; set; }
         public string memberMobile { get; set; }

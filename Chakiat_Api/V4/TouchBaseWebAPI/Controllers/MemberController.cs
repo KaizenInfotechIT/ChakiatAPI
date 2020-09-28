@@ -578,7 +578,7 @@ namespace TouchBaseWebAPI.Controllers
                 }
                 else
                 {
-                    MemberDetail = MemberMaster.GetMemberListSync(member.updatedOn, member.profileId, member.grpID, out zipFilePath);
+                    MemberDetail = MemberMaster.GetMemberListSync(member.updatedOn,  member.grpID, out zipFilePath);
                 }
                 
 
@@ -666,7 +666,7 @@ namespace TouchBaseWebAPI.Controllers
 
                 // Forward to GetMemberListSync method to get updated records
                 string zipFilePath = string.Empty;
-                MemberListSyncResult MemberDetail = MemberMaster.GetMemberListSync(dt.ToString("yyyy/MM/dd HH:mm:ss"),null, Input.grpID, out zipFilePath);
+                MemberListSyncResult MemberDetail = MemberMaster.GetMemberListSync(dt.ToString("yyyy/MM/dd HH:mm:ss"),Input.grpID, out zipFilePath);
 
                 if (!string.IsNullOrEmpty(zipFilePath))
                 {
