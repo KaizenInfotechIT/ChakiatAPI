@@ -1954,14 +1954,14 @@ namespace TouchBaseWebAPI.BusinessEntities
             int i = 0;
             try
             {
-                result = MySqlHelper.ExecuteDataset(GlobalVar.strAppConn, CommandType.StoredProcedure, "V6_USPGetMemberDetails_ALLTest", param);
+                result = MySqlHelper.ExecuteDataset(GlobalVar.strAppConn, CommandType.StoredProcedure, "V6_USPGetMemberDetails_ALL", param);
             }
             catch
             {
                 if (i < 3)
                 {
                     i += 1;
-                    result = MySqlHelper.ExecuteDataset(GlobalVar.strAppConn, CommandType.StoredProcedure, "V6_USPGetMemberDetails_ALLTest", param);
+                    result = MySqlHelper.ExecuteDataset(GlobalVar.strAppConn, CommandType.StoredProcedure, "V6_USPGetMemberDetails_ALL", param);
                 }
                 else
                 {
